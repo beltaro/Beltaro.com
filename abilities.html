@@ -1,0 +1,3796 @@
+<html>
+<head>
+<title>
+Abilities</title>
+<style>
+table{font-family:arial, sans-serif;border-collapse:collapse;}
+td,th{border:1px solid #666666;text-align:left;padding:8px;min-width:45px;}
+th{background-color:#CCCCCC;}
+p{margin:0;}
+tr:nth-child(even){background-color:#D8D8D8;}
+tr:nth-child(odd){background-color:#EEEEEE;}
+td.true{background-color:#72FF85AA;}
+td.false{background-color:#FF6666AA;}
+td.other{background-color:#42A3FFAA;}
+td.error{color:#FF0000;}
+th,td.true,td.false,td.other{text-align:center;}</style>
+<link rel="shortcut icon" type="image/x-icon" href="https://i.imgur.com/am80ox1.png">
+
+<style>
+.json-block { background-color: lightgray; display: inline-block; border: 5px solid darkgray; padding: 10px }</style>
+</head>
+<body>
+<h1>
+Abilities</h1>
+<hr>
+
+<p>
+<h2>
+Overview</h2>
+<h3>
+ThreeCore</h3>
+<ul>
+<li>
+<a href="#threecore:dummy">
+Dummy</a>
+</li>
+<li>
+<a href="#threecore:command">
+Command</a>
+</li>
+<li>
+<a href="#threecore:healing">
+Healing</a>
+</li>
+<li>
+<a href="#threecore:flight">
+Flight</a>
+</li>
+<li>
+<a href="#threecore:accelerating_flight">
+Accelerating Flight</a>
+</li>
+<li>
+<a href="#threecore:teleport">
+Teleport</a>
+</li>
+<li>
+<a href="#threecore:attribute_modifier">
+Attribute Modifier</a>
+</li>
+<li>
+<a href="#threecore:invisibility">
+Invisibility</a>
+</li>
+<li>
+<a href="#threecore:slowfall">
+Slowfall</a>
+</li>
+<li>
+<a href="#threecore:water_breathing">
+Water Breathing</a>
+</li>
+<li>
+<a href="#threecore:size_change">
+Size Change</a>
+</li>
+<li>
+<a href="#threecore:custom_hotbar">
+Custom Hotbar</a>
+</li>
+<li>
+<a href="#threecore:opening_nbt_timer">
+Open/Close</a>
+</li>
+<li>
+<a href="#threecore:model_layer">
+Model Layer</a>
+</li>
+<li>
+<a href="#threecore:projectile">
+Projectile</a>
+</li>
+<li>
+<a href="#threecore:damage_immunity">
+Damage Immunity</a>
+</li>
+<li>
+<a href="#threecore:potion_effect">
+Potion Effect</a>
+</li>
+<li>
+<a href="#threecore:multi_jump">
+Multi Jump</a>
+</li>
+<li>
+<a href="#threecore:name_change">
+Name Change</a>
+</li>
+<li>
+<a href="#threecore:hud">
+HUD</a>
+</li>
+<li>
+<a href="#threecore:skin_change">
+Skin Change</a>
+</li>
+<li>
+<a href="#threecore:hide_body_parts">
+Hide Body Parts</a>
+</li>
+<li>
+<a href="#threecore:change_ability_tab_texture">
+Change Ability Tab Texture</a>
+</li>
+<li>
+<a href="#threecore:energy">
+Energy</a>
+</li>
+<li>
+<a href="#threecore:drop_armor">
+Drop Armor</a>
+</li>
+</ul>
+<h3>
+PymTech</h3>
+<ul>
+<li>
+<a href="#pymtech:regulator">
+Regulator</a>
+</li>
+<li>
+<a href="#pymtech:regulator_tier2">
+Regulator</a>
+</li>
+<li>
+<a href="#pymtech:regulator_tier3">
+Regulator</a>
+</li>
+<li>
+<a href="#pymtech:pym_particle_size_change">
+Pym Particle Size Change</a>
+</li>
+</ul>
+</p>
+<hr>
+
+<div id="threecore:dummy">
+<h2>
+Dummy<code>
+threecore:dummy</code>
+</h2>
+<h3>
+Data Settings:</h3>
+<table>
+<thead>
+<tr>
+<th>
+Setting</th>
+<th>
+Type</th>
+<th>
+Fallback Value</th>
+<th>
+Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+show_in_bar</td>
+<td>
+Boolean</td>
+<td>
+<code>
+false</code>
+</td>
+<td>
+Determines if this ability should be displayed in the ability bar without a condition that displays it there.</td>
+</tr>
+<tr>
+<td>
+hidden</td>
+<td>
+Boolean</td>
+<td>
+<code>
+false</code>
+</td>
+<td>
+If enabled, the ability will be invisible for the ability GUI & ability bar</td>
+</tr>
+<tr>
+<td>
+title</td>
+<td>
+ITextComponent</td>
+<td>
+<code>
+{"translate":"ability.threecore.dummy"}</code>
+</td>
+<td>
+Allows you to set a custom title for this ability</td>
+</tr>
+<tr>
+<td>
+icon</td>
+<td>
+IIcon</td>
+<td>
+<code>
+{"type":"threecore:item","item":"minecraft:barrier","count":1}</code>
+</td>
+<td>
+Lets you customize the icon for the ability</td>
+</tr>
+<tr>
+<td>
+bar_color</td>
+<td>
+EnumAbilityColor</td>
+<td>
+<code>
+"light_gray"</code>
+</td>
+<td>
+Changes the color of the ability in the ability bar</td>
+</tr>
+<tr>
+<td>
+additional_data</td>
+<td>
+CompoundNBT</td>
+<td>
+<code>
+{}</code>
+</td>
+<td>
+You can store additional data here, especially useful if you use scripts and want to mark certain abilities</td>
+</tr>
+</tbody>
+</table>
+<h3>
+Example:</h3>
+<pre class="json-block" id="threecore:dummy_example">
+</pre>
+<script>
+var json = JSON.parse('{"example_ability":{"ability":"threecore:dummy",  "show_in_bar": false,  "hidden": false,  "title": {"translate":"ability.threecore.dummy"},  "icon": {"type":"threecore:item","item":"minecraft:barrier","count":1},  "bar_color": "light_gray",  "additional_data": {}}}'); document.getElementById('threecore:dummy_example').innerHTML = JSON.stringify(json, undefined, 2);</script>
+</div>
+<hr>
+
+<div id="threecore:command">
+<h2>
+Command<code>
+threecore:command</code>
+</h2>
+<h3>
+Data Settings:</h3>
+<table>
+<thead>
+<tr>
+<th>
+Setting</th>
+<th>
+Type</th>
+<th>
+Fallback Value</th>
+<th>
+Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+show_in_bar</td>
+<td>
+Boolean</td>
+<td>
+<code>
+false</code>
+</td>
+<td>
+Determines if this ability should be displayed in the ability bar without a condition that displays it there.</td>
+</tr>
+<tr>
+<td>
+hidden</td>
+<td>
+Boolean</td>
+<td>
+<code>
+false</code>
+</td>
+<td>
+If enabled, the ability will be invisible for the ability GUI & ability bar</td>
+</tr>
+<tr>
+<td>
+title</td>
+<td>
+ITextComponent</td>
+<td>
+<code>
+{"translate":"ability.threecore.command"}</code>
+</td>
+<td>
+Allows you to set a custom title for this ability</td>
+</tr>
+<tr>
+<td>
+icon</td>
+<td>
+IIcon</td>
+<td>
+<code>
+{"type":"threecore:item","item":"minecraft:command_block","count":1}</code>
+</td>
+<td>
+Lets you customize the icon for the ability</td>
+</tr>
+<tr>
+<td>
+bar_color</td>
+<td>
+EnumAbilityColor</td>
+<td>
+<code>
+"light_gray"</code>
+</td>
+<td>
+Changes the color of the ability in the ability bar</td>
+</tr>
+<tr>
+<td>
+additional_data</td>
+<td>
+CompoundNBT</td>
+<td>
+<code>
+{}</code>
+</td>
+<td>
+You can store additional data here, especially useful if you use scripts and want to mark certain abilities</td>
+</tr>
+<tr>
+<td>
+commands</td>
+<td>
+CommandListThreeData$CommandList</td>
+<td>
+<code>
+"/say Hello World"</code>
+</td>
+<td>
+Sets the commands which get executed when using the ability</td>
+</tr>
+</tbody>
+</table>
+<h3>
+Example:</h3>
+<pre class="json-block" id="threecore:command_example">
+</pre>
+<script>
+var json = JSON.parse('{"example_ability":{"ability":"threecore:command",  "show_in_bar": false,  "hidden": false,  "title": {"translate":"ability.threecore.command"},  "icon": {"type":"threecore:item","item":"minecraft:command_block","count":1},  "bar_color": "light_gray",  "additional_data": {},  "commands": "/say Hello World"}}'); document.getElementById('threecore:command_example').innerHTML = JSON.stringify(json, undefined, 2);</script>
+</div>
+<hr>
+
+<div id="threecore:healing">
+<h2>
+Healing<code>
+threecore:healing</code>
+</h2>
+<h3>
+Data Settings:</h3>
+<table>
+<thead>
+<tr>
+<th>
+Setting</th>
+<th>
+Type</th>
+<th>
+Fallback Value</th>
+<th>
+Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+show_in_bar</td>
+<td>
+Boolean</td>
+<td>
+<code>
+false</code>
+</td>
+<td>
+Determines if this ability should be displayed in the ability bar without a condition that displays it there.</td>
+</tr>
+<tr>
+<td>
+hidden</td>
+<td>
+Boolean</td>
+<td>
+<code>
+false</code>
+</td>
+<td>
+If enabled, the ability will be invisible for the ability GUI & ability bar</td>
+</tr>
+<tr>
+<td>
+title</td>
+<td>
+ITextComponent</td>
+<td>
+<code>
+{"translate":"ability.threecore.healing"}</code>
+</td>
+<td>
+Allows you to set a custom title for this ability</td>
+</tr>
+<tr>
+<td>
+icon</td>
+<td>
+IIcon</td>
+<td>
+<code>
+{"type":"threecore:texture","texture":"threecore:textures/gui/icons.png","u":0,"v":0,"width":16,"height":16,"texture_width":256,"texture_height":256}</code>
+</td>
+<td>
+Lets you customize the icon for the ability</td>
+</tr>
+<tr>
+<td>
+bar_color</td>
+<td>
+EnumAbilityColor</td>
+<td>
+<code>
+"light_gray"</code>
+</td>
+<td>
+Changes the color of the ability in the ability bar</td>
+</tr>
+<tr>
+<td>
+additional_data</td>
+<td>
+CompoundNBT</td>
+<td>
+<code>
+{}</code>
+</td>
+<td>
+You can store additional data here, especially useful if you use scripts and want to mark certain abilities</td>
+</tr>
+<tr>
+<td>
+frequency</td>
+<td>
+Integer</td>
+<td>
+<code>
+20</code>
+</td>
+<td>
+Sets the frequency of healing (in ticks)</td>
+</tr>
+<tr>
+<td>
+amount</td>
+<td>
+Float</td>
+<td>
+<code>
+0.5</code>
+</td>
+<td>
+Sets the amount of hearts for each healing</td>
+</tr>
+</tbody>
+</table>
+<h3>
+Example:</h3>
+<pre class="json-block" id="threecore:healing_example">
+</pre>
+<script>
+var json = JSON.parse('{"example_ability":{"ability":"threecore:healing",  "show_in_bar": false,  "hidden": false,  "title": {"translate":"ability.threecore.healing"},  "icon": {"type":"threecore:texture","texture":"threecore:textures/gui/icons.png","u":0,"v":0,"width":16,"height":16,"texture_width":256,"texture_height":256},  "bar_color": "light_gray",  "additional_data": {},  "frequency": 20,  "amount": 0.5}}'); document.getElementById('threecore:healing_example').innerHTML = JSON.stringify(json, undefined, 2);</script>
+</div>
+<hr>
+
+<div id="threecore:flight">
+<h2>
+Flight<code>
+threecore:flight</code>
+</h2>
+<h3>
+Data Settings:</h3>
+<table>
+<thead>
+<tr>
+<th>
+Setting</th>
+<th>
+Type</th>
+<th>
+Fallback Value</th>
+<th>
+Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+show_in_bar</td>
+<td>
+Boolean</td>
+<td>
+<code>
+false</code>
+</td>
+<td>
+Determines if this ability should be displayed in the ability bar without a condition that displays it there.</td>
+</tr>
+<tr>
+<td>
+hidden</td>
+<td>
+Boolean</td>
+<td>
+<code>
+false</code>
+</td>
+<td>
+If enabled, the ability will be invisible for the ability GUI & ability bar</td>
+</tr>
+<tr>
+<td>
+title</td>
+<td>
+ITextComponent</td>
+<td>
+<code>
+{"translate":"ability.threecore.flight"}</code>
+</td>
+<td>
+Allows you to set a custom title for this ability</td>
+</tr>
+<tr>
+<td>
+icon</td>
+<td>
+IIcon</td>
+<td>
+<code>
+{"type":"threecore:texture","texture":"threecore:textures/gui/icons.png","u":0,"v":16,"width":16,"height":16,"texture_width":256,"texture_height":256}</code>
+</td>
+<td>
+Lets you customize the icon for the ability</td>
+</tr>
+<tr>
+<td>
+bar_color</td>
+<td>
+EnumAbilityColor</td>
+<td>
+<code>
+"light_gray"</code>
+</td>
+<td>
+Changes the color of the ability in the ability bar</td>
+</tr>
+<tr>
+<td>
+additional_data</td>
+<td>
+CompoundNBT</td>
+<td>
+<code>
+{}</code>
+</td>
+<td>
+You can store additional data here, especially useful if you use scripts and want to mark certain abilities</td>
+</tr>
+<tr>
+<td>
+speed</td>
+<td>
+Float</td>
+<td>
+<code>
+1.0</code>
+</td>
+<td>
+Sets the speed multiplier for flying when you are NOT sprinting</td>
+</tr>
+<tr>
+<td>
+sprint_speed</td>
+<td>
+Float</td>
+<td>
+<code>
+3.0</code>
+</td>
+<td>
+Sets the speed multiplier for flying when you are sprinting</td>
+</tr>
+<tr>
+<td>
+rotate_arms</td>
+<td>
+Boolean</td>
+<td>
+<code>
+true</code>
+</td>
+<td>
+If enabled the players arms will face in your direction (like Superman)</td>
+</tr>
+</tbody>
+</table>
+<h3>
+Example:</h3>
+<pre class="json-block" id="threecore:flight_example">
+</pre>
+<script>
+var json = JSON.parse('{"example_ability":{"ability":"threecore:flight",  "show_in_bar": false,  "hidden": false,  "title": {"translate":"ability.threecore.flight"},  "icon": {"type":"threecore:texture","texture":"threecore:textures/gui/icons.png","u":0,"v":16,"width":16,"height":16,"texture_width":256,"texture_height":256},  "bar_color": "light_gray",  "additional_data": {},  "speed": 1.0,  "sprint_speed": 3.0,  "rotate_arms": true}}'); document.getElementById('threecore:flight_example').innerHTML = JSON.stringify(json, undefined, 2);</script>
+</div>
+<hr>
+
+<div id="threecore:accelerating_flight">
+<h2>
+Accelerating Flight<code>
+threecore:accelerating_flight</code>
+</h2>
+<h3>
+Data Settings:</h3>
+<table>
+<thead>
+<tr>
+<th>
+Setting</th>
+<th>
+Type</th>
+<th>
+Fallback Value</th>
+<th>
+Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+show_in_bar</td>
+<td>
+Boolean</td>
+<td>
+<code>
+false</code>
+</td>
+<td>
+Determines if this ability should be displayed in the ability bar without a condition that displays it there.</td>
+</tr>
+<tr>
+<td>
+hidden</td>
+<td>
+Boolean</td>
+<td>
+<code>
+false</code>
+</td>
+<td>
+If enabled, the ability will be invisible for the ability GUI & ability bar</td>
+</tr>
+<tr>
+<td>
+title</td>
+<td>
+ITextComponent</td>
+<td>
+<code>
+{"translate":"ability.threecore.accelerating_flight"}</code>
+</td>
+<td>
+Allows you to set a custom title for this ability</td>
+</tr>
+<tr>
+<td>
+icon</td>
+<td>
+IIcon</td>
+<td>
+<code>
+{"type":"threecore:texture","texture":"threecore:textures/gui/icons.png","u":0,"v":16,"width":16,"height":16,"texture_width":256,"texture_height":256}</code>
+</td>
+<td>
+Lets you customize the icon for the ability</td>
+</tr>
+<tr>
+<td>
+bar_color</td>
+<td>
+EnumAbilityColor</td>
+<td>
+<code>
+"light_gray"</code>
+</td>
+<td>
+Changes the color of the ability in the ability bar</td>
+</tr>
+<tr>
+<td>
+additional_data</td>
+<td>
+CompoundNBT</td>
+<td>
+<code>
+{}</code>
+</td>
+<td>
+You can store additional data here, especially useful if you use scripts and want to mark certain abilities</td>
+</tr>
+<tr>
+<td>
+base_speed</td>
+<td>
+Float</td>
+<td>
+<code>
+0.25</code>
+</td>
+<td>
+Speed you start with when starting to fly</td>
+</tr>
+<tr>
+<td>
+max_speed</td>
+<td>
+Float</td>
+<td>
+<code>
+10.0</code>
+</td>
+<td>
+Maximum flight speed you can reach</td>
+</tr>
+<tr>
+<td>
+acceleration</td>
+<td>
+Float</td>
+<td>
+<code>
+0.01</code>
+</td>
+<td>
+Acceleration: amount of speed per tick</td>
+</tr>
+<tr>
+<td>
+rotate_arms</td>
+<td>
+Boolean</td>
+<td>
+<code>
+true</code>
+</td>
+<td>
+If enabled the players arms will face in your direction (like Superman)</td>
+</tr>
+</tbody>
+</table>
+<h3>
+Example:</h3>
+<pre class="json-block" id="threecore:accelerating_flight_example">
+</pre>
+<script>
+var json = JSON.parse('{"example_ability":{"ability":"threecore:accelerating_flight",  "show_in_bar": false,  "hidden": false,  "title": {"translate":"ability.threecore.accelerating_flight"},  "icon": {"type":"threecore:texture","texture":"threecore:textures/gui/icons.png","u":0,"v":16,"width":16,"height":16,"texture_width":256,"texture_height":256},  "bar_color": "light_gray",  "additional_data": {},  "base_speed": 0.25,  "max_speed": 10.0,  "acceleration": 0.01,  "rotate_arms": true}}'); document.getElementById('threecore:accelerating_flight_example').innerHTML = JSON.stringify(json, undefined, 2);</script>
+</div>
+<hr>
+
+<div id="threecore:teleport">
+<h2>
+Teleport<code>
+threecore:teleport</code>
+</h2>
+<h3>
+Data Settings:</h3>
+<table>
+<thead>
+<tr>
+<th>
+Setting</th>
+<th>
+Type</th>
+<th>
+Fallback Value</th>
+<th>
+Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+show_in_bar</td>
+<td>
+Boolean</td>
+<td>
+<code>
+false</code>
+</td>
+<td>
+Determines if this ability should be displayed in the ability bar without a condition that displays it there.</td>
+</tr>
+<tr>
+<td>
+hidden</td>
+<td>
+Boolean</td>
+<td>
+<code>
+false</code>
+</td>
+<td>
+If enabled, the ability will be invisible for the ability GUI & ability bar</td>
+</tr>
+<tr>
+<td>
+title</td>
+<td>
+ITextComponent</td>
+<td>
+<code>
+{"translate":"ability.threecore.teleport"}</code>
+</td>
+<td>
+Allows you to set a custom title for this ability</td>
+</tr>
+<tr>
+<td>
+icon</td>
+<td>
+IIcon</td>
+<td>
+<code>
+{"type":"threecore:item","item":"minecraft:ender_pearl","count":1}</code>
+</td>
+<td>
+Lets you customize the icon for the ability</td>
+</tr>
+<tr>
+<td>
+bar_color</td>
+<td>
+EnumAbilityColor</td>
+<td>
+<code>
+"light_gray"</code>
+</td>
+<td>
+Changes the color of the ability in the ability bar</td>
+</tr>
+<tr>
+<td>
+additional_data</td>
+<td>
+CompoundNBT</td>
+<td>
+<code>
+{}</code>
+</td>
+<td>
+You can store additional data here, especially useful if you use scripts and want to mark certain abilities</td>
+</tr>
+<tr>
+<td>
+distance</td>
+<td>
+Float</td>
+<td>
+<code>
+5.0</code>
+</td>
+<td>
+The maximum amount of blocks you can teleport to</td>
+</tr>
+</tbody>
+</table>
+<h3>
+Example:</h3>
+<pre class="json-block" id="threecore:teleport_example">
+</pre>
+<script>
+var json = JSON.parse('{"example_ability":{"ability":"threecore:teleport",  "show_in_bar": false,  "hidden": false,  "title": {"translate":"ability.threecore.teleport"},  "icon": {"type":"threecore:item","item":"minecraft:ender_pearl","count":1},  "bar_color": "light_gray",  "additional_data": {},  "distance": 5.0}}'); document.getElementById('threecore:teleport_example').innerHTML = JSON.stringify(json, undefined, 2);</script>
+</div>
+<hr>
+
+<div id="threecore:attribute_modifier">
+<h2>
+Attribute Modifier<code>
+threecore:attribute_modifier</code>
+</h2>
+<h3>
+Data Settings:</h3>
+<table>
+<thead>
+<tr>
+<th>
+Setting</th>
+<th>
+Type</th>
+<th>
+Fallback Value</th>
+<th>
+Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+show_in_bar</td>
+<td>
+Boolean</td>
+<td>
+<code>
+false</code>
+</td>
+<td>
+Determines if this ability should be displayed in the ability bar without a condition that displays it there.</td>
+</tr>
+<tr>
+<td>
+hidden</td>
+<td>
+Boolean</td>
+<td>
+<code>
+false</code>
+</td>
+<td>
+If enabled, the ability will be invisible for the ability GUI & ability bar</td>
+</tr>
+<tr>
+<td>
+title</td>
+<td>
+ITextComponent</td>
+<td>
+<code>
+{"translate":"ability.threecore.attribute_modifier"}</code>
+</td>
+<td>
+Allows you to set a custom title for this ability</td>
+</tr>
+<tr>
+<td>
+icon</td>
+<td>
+IIcon</td>
+<td>
+<code>
+{"type":"threecore:item","item":"minecraft:barrier","count":1}</code>
+</td>
+<td>
+Lets you customize the icon for the ability</td>
+</tr>
+<tr>
+<td>
+bar_color</td>
+<td>
+EnumAbilityColor</td>
+<td>
+<code>
+"light_gray"</code>
+</td>
+<td>
+Changes the color of the ability in the ability bar</td>
+</tr>
+<tr>
+<td>
+additional_data</td>
+<td>
+CompoundNBT</td>
+<td>
+<code>
+{}</code>
+</td>
+<td>
+You can store additional data here, especially useful if you use scripts and want to mark certain abilities</td>
+</tr>
+<tr>
+<td>
+attribute</td>
+<td>
+Attribute</td>
+<td>
+<code>
+"minecraft:generic.armor"</code>
+</td>
+<td>
+Determines which attribute should be modified. Possible attribute: "minecraft:generic.max_health", "minecraft:generic.follow_range", "minecraft:generic.knockback_resistance", "minecraft:generic.movement_speed", "minecraft:generic.flying_speed", "minecraft:generic.attack_damage", "minecraft:generic.attack_knockback", "minecraft:generic.attack_speed", "minecraft:generic.armor", "minecraft:generic.armor_toughness", "minecraft:generic.luck", "minecraft:zombie.spawn_reinforcements", "minecraft:horse.jump_strength", "threecore:step_height", "threecore:fall_resistance", "threecore:jump_height", "threecore:sprint_speed", "threecore:size_width", "threecore:size_height", "forge:swim_speed", "forge:nametag_distance", "forge:entity_gravity", "forge:reach_distance", "tetra:draw_strength", "tetra:draw_speed", "tetra:ability_cooldown", "tetra:ability_damage", "pymtech:size_resistance"</td>
+</tr>
+<tr>
+<td>
+amount</td>
+<td>
+Double</td>
+<td>
+<code>
+1.0</code>
+</td>
+<td>
+The amount for the giving attribute modifier</td>
+</tr>
+<tr>
+<td>
+operation</td>
+<td>
+AttributeModifier$Operation</td>
+<td>
+<code>
+0</code>
+</td>
+<td>
+The operation for the giving attribute modifier (More: https://minecraft.gamepedia.com/Attribute#Operations)</td>
+</tr>
+<tr>
+<td>
+uuid</td>
+<td>
+UUID</td>
+<td>
+<code>
+"498be4fb-af04-42f2-8948-e6ccdc0d99e1"</code>
+</td>
+<td>
+Sets the unique identifier for this attribute modifier. If not specified it will generate a random one</td>
+</tr>
+</tbody>
+</table>
+<h3>
+Example:</h3>
+<pre class="json-block" id="threecore:attribute_modifier_example">
+</pre>
+<script>
+var json = JSON.parse('{"example_ability":{"ability":"threecore:attribute_modifier",  "show_in_bar": false,  "hidden": false,  "title": {"translate":"ability.threecore.attribute_modifier"},  "icon": {"type":"threecore:item","item":"minecraft:barrier","count":1},  "bar_color": "light_gray",  "additional_data": {},  "attribute": "minecraft:generic.armor",  "amount": 1.0,  "operation": 0,  "uuid": "498be4fb-af04-42f2-8948-e6ccdc0d99e1"}}'); document.getElementById('threecore:attribute_modifier_example').innerHTML = JSON.stringify(json, undefined, 2);</script>
+</div>
+<hr>
+
+<div id="threecore:invisibility">
+<h2>
+Invisibility<code>
+threecore:invisibility</code>
+</h2>
+<h3>
+Data Settings:</h3>
+<table>
+<thead>
+<tr>
+<th>
+Setting</th>
+<th>
+Type</th>
+<th>
+Fallback Value</th>
+<th>
+Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+show_in_bar</td>
+<td>
+Boolean</td>
+<td>
+<code>
+false</code>
+</td>
+<td>
+Determines if this ability should be displayed in the ability bar without a condition that displays it there.</td>
+</tr>
+<tr>
+<td>
+hidden</td>
+<td>
+Boolean</td>
+<td>
+<code>
+false</code>
+</td>
+<td>
+If enabled, the ability will be invisible for the ability GUI & ability bar</td>
+</tr>
+<tr>
+<td>
+title</td>
+<td>
+ITextComponent</td>
+<td>
+<code>
+{"translate":"ability.threecore.invisibility"}</code>
+</td>
+<td>
+Allows you to set a custom title for this ability</td>
+</tr>
+<tr>
+<td>
+icon</td>
+<td>
+IIcon</td>
+<td>
+<code>
+{"type":"threecore:texture","texture":"threecore:textures/gui/icons.png","u":96,"v":16,"width":16,"height":16,"texture_width":256,"texture_height":256}</code>
+</td>
+<td>
+Lets you customize the icon for the ability</td>
+</tr>
+<tr>
+<td>
+bar_color</td>
+<td>
+EnumAbilityColor</td>
+<td>
+<code>
+"light_gray"</code>
+</td>
+<td>
+Changes the color of the ability in the ability bar</td>
+</tr>
+<tr>
+<td>
+additional_data</td>
+<td>
+CompoundNBT</td>
+<td>
+<code>
+{}</code>
+</td>
+<td>
+You can store additional data here, especially useful if you use scripts and want to mark certain abilities</td>
+</tr>
+</tbody>
+</table>
+<h3>
+Example:</h3>
+<pre class="json-block" id="threecore:invisibility_example">
+</pre>
+<script>
+var json = JSON.parse('{"example_ability":{"ability":"threecore:invisibility",  "show_in_bar": false,  "hidden": false,  "title": {"translate":"ability.threecore.invisibility"},  "icon": {"type":"threecore:texture","texture":"threecore:textures/gui/icons.png","u":96,"v":16,"width":16,"height":16,"texture_width":256,"texture_height":256},  "bar_color": "light_gray",  "additional_data": {}}}'); document.getElementById('threecore:invisibility_example').innerHTML = JSON.stringify(json, undefined, 2);</script>
+</div>
+<hr>
+
+<div id="threecore:slowfall">
+<h2>
+Slowfall<code>
+threecore:slowfall</code>
+</h2>
+<h3>
+Data Settings:</h3>
+<table>
+<thead>
+<tr>
+<th>
+Setting</th>
+<th>
+Type</th>
+<th>
+Fallback Value</th>
+<th>
+Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+show_in_bar</td>
+<td>
+Boolean</td>
+<td>
+<code>
+false</code>
+</td>
+<td>
+Determines if this ability should be displayed in the ability bar without a condition that displays it there.</td>
+</tr>
+<tr>
+<td>
+hidden</td>
+<td>
+Boolean</td>
+<td>
+<code>
+false</code>
+</td>
+<td>
+If enabled, the ability will be invisible for the ability GUI & ability bar</td>
+</tr>
+<tr>
+<td>
+title</td>
+<td>
+ITextComponent</td>
+<td>
+<code>
+{"translate":"ability.threecore.slowfall"}</code>
+</td>
+<td>
+Allows you to set a custom title for this ability</td>
+</tr>
+<tr>
+<td>
+icon</td>
+<td>
+IIcon</td>
+<td>
+<code>
+{"type":"threecore:item","item":"minecraft:feather","count":1}</code>
+</td>
+<td>
+Lets you customize the icon for the ability</td>
+</tr>
+<tr>
+<td>
+bar_color</td>
+<td>
+EnumAbilityColor</td>
+<td>
+<code>
+"light_gray"</code>
+</td>
+<td>
+Changes the color of the ability in the ability bar</td>
+</tr>
+<tr>
+<td>
+additional_data</td>
+<td>
+CompoundNBT</td>
+<td>
+<code>
+{}</code>
+</td>
+<td>
+You can store additional data here, especially useful if you use scripts and want to mark certain abilities</td>
+</tr>
+</tbody>
+</table>
+<h3>
+Example:</h3>
+<pre class="json-block" id="threecore:slowfall_example">
+</pre>
+<script>
+var json = JSON.parse('{"example_ability":{"ability":"threecore:slowfall",  "show_in_bar": false,  "hidden": false,  "title": {"translate":"ability.threecore.slowfall"},  "icon": {"type":"threecore:item","item":"minecraft:feather","count":1},  "bar_color": "light_gray",  "additional_data": {}}}'); document.getElementById('threecore:slowfall_example').innerHTML = JSON.stringify(json, undefined, 2);</script>
+</div>
+<hr>
+
+<div id="threecore:water_breathing">
+<h2>
+Water Breathing<code>
+threecore:water_breathing</code>
+</h2>
+<h3>
+Data Settings:</h3>
+<table>
+<thead>
+<tr>
+<th>
+Setting</th>
+<th>
+Type</th>
+<th>
+Fallback Value</th>
+<th>
+Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+show_in_bar</td>
+<td>
+Boolean</td>
+<td>
+<code>
+false</code>
+</td>
+<td>
+Determines if this ability should be displayed in the ability bar without a condition that displays it there.</td>
+</tr>
+<tr>
+<td>
+hidden</td>
+<td>
+Boolean</td>
+<td>
+<code>
+false</code>
+</td>
+<td>
+If enabled, the ability will be invisible for the ability GUI & ability bar</td>
+</tr>
+<tr>
+<td>
+title</td>
+<td>
+ITextComponent</td>
+<td>
+<code>
+{"translate":"ability.threecore.water_breathing"}</code>
+</td>
+<td>
+Allows you to set a custom title for this ability</td>
+</tr>
+<tr>
+<td>
+icon</td>
+<td>
+IIcon</td>
+<td>
+<code>
+{"type":"threecore:texture","texture":"threecore:textures/gui/icons.png","u":16,"v":16,"width":16,"height":16,"texture_width":256,"texture_height":256}</code>
+</td>
+<td>
+Lets you customize the icon for the ability</td>
+</tr>
+<tr>
+<td>
+bar_color</td>
+<td>
+EnumAbilityColor</td>
+<td>
+<code>
+"light_gray"</code>
+</td>
+<td>
+Changes the color of the ability in the ability bar</td>
+</tr>
+<tr>
+<td>
+additional_data</td>
+<td>
+CompoundNBT</td>
+<td>
+<code>
+{}</code>
+</td>
+<td>
+You can store additional data here, especially useful if you use scripts and want to mark certain abilities</td>
+</tr>
+</tbody>
+</table>
+<h3>
+Example:</h3>
+<pre class="json-block" id="threecore:water_breathing_example">
+</pre>
+<script>
+var json = JSON.parse('{"example_ability":{"ability":"threecore:water_breathing",  "show_in_bar": false,  "hidden": false,  "title": {"translate":"ability.threecore.water_breathing"},  "icon": {"type":"threecore:texture","texture":"threecore:textures/gui/icons.png","u":16,"v":16,"width":16,"height":16,"texture_width":256,"texture_height":256},  "bar_color": "light_gray",  "additional_data": {}}}'); document.getElementById('threecore:water_breathing_example').innerHTML = JSON.stringify(json, undefined, 2);</script>
+</div>
+<hr>
+
+<div id="threecore:size_change">
+<h2>
+Size Change<code>
+threecore:size_change</code>
+</h2>
+<h3>
+Data Settings:</h3>
+<table>
+<thead>
+<tr>
+<th>
+Setting</th>
+<th>
+Type</th>
+<th>
+Fallback Value</th>
+<th>
+Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+show_in_bar</td>
+<td>
+Boolean</td>
+<td>
+<code>
+false</code>
+</td>
+<td>
+Determines if this ability should be displayed in the ability bar without a condition that displays it there.</td>
+</tr>
+<tr>
+<td>
+hidden</td>
+<td>
+Boolean</td>
+<td>
+<code>
+false</code>
+</td>
+<td>
+If enabled, the ability will be invisible for the ability GUI & ability bar</td>
+</tr>
+<tr>
+<td>
+title</td>
+<td>
+ITextComponent</td>
+<td>
+<code>
+{"translate":"ability.threecore.size_change"}</code>
+</td>
+<td>
+Allows you to set a custom title for this ability</td>
+</tr>
+<tr>
+<td>
+icon</td>
+<td>
+IIcon</td>
+<td>
+<code>
+{"type":"threecore:texture","texture":"threecore:textures/gui/icons.png","u":160,"v":0,"width":16,"height":16,"texture_width":256,"texture_height":256}</code>
+</td>
+<td>
+Lets you customize the icon for the ability</td>
+</tr>
+<tr>
+<td>
+bar_color</td>
+<td>
+EnumAbilityColor</td>
+<td>
+<code>
+"light_gray"</code>
+</td>
+<td>
+Changes the color of the ability in the ability bar</td>
+</tr>
+<tr>
+<td>
+additional_data</td>
+<td>
+CompoundNBT</td>
+<td>
+<code>
+{}</code>
+</td>
+<td>
+You can store additional data here, especially useful if you use scripts and want to mark certain abilities</td>
+</tr>
+<tr>
+<td>
+size</td>
+<td>
+Float</td>
+<td>
+<code>
+0.1</code>
+</td>
+<td>
+Determines the size for the size change</td>
+</tr>
+<tr>
+<td>
+size_change_type</td>
+<td>
+SizeChangeType</td>
+<td>
+<code>
+"threecore:default"</code>
+</td>
+<td>
+Determines the size change type for the size change</td>
+</tr>
+</tbody>
+</table>
+<h3>
+Example:</h3>
+<pre class="json-block" id="threecore:size_change_example">
+</pre>
+<script>
+var json = JSON.parse('{"example_ability":{"ability":"threecore:size_change",  "show_in_bar": false,  "hidden": false,  "title": {"translate":"ability.threecore.size_change"},  "icon": {"type":"threecore:texture","texture":"threecore:textures/gui/icons.png","u":160,"v":0,"width":16,"height":16,"texture_width":256,"texture_height":256},  "bar_color": "light_gray",  "additional_data": {},  "size": 0.1,  "size_change_type": "threecore:default"}}'); document.getElementById('threecore:size_change_example').innerHTML = JSON.stringify(json, undefined, 2);</script>
+</div>
+<hr>
+
+<div id="threecore:custom_hotbar">
+<h2>
+Custom Hotbar<code>
+threecore:custom_hotbar</code>
+</h2>
+<h3>
+Data Settings:</h3>
+<table>
+<thead>
+<tr>
+<th>
+Setting</th>
+<th>
+Type</th>
+<th>
+Fallback Value</th>
+<th>
+Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+show_in_bar</td>
+<td>
+Boolean</td>
+<td>
+<code>
+false</code>
+</td>
+<td>
+Determines if this ability should be displayed in the ability bar without a condition that displays it there.</td>
+</tr>
+<tr>
+<td>
+hidden</td>
+<td>
+Boolean</td>
+<td>
+<code>
+true</code>
+</td>
+<td>
+If enabled, the ability will be invisible for the ability GUI & ability bar</td>
+</tr>
+<tr>
+<td>
+title</td>
+<td>
+ITextComponent</td>
+<td>
+<code>
+{"translate":"ability.threecore.custom_hotbar"}</code>
+</td>
+<td>
+Allows you to set a custom title for this ability</td>
+</tr>
+<tr>
+<td>
+icon</td>
+<td>
+IIcon</td>
+<td>
+<code>
+{"type":"threecore:item","item":"minecraft:stick","count":1}</code>
+</td>
+<td>
+Lets you customize the icon for the ability</td>
+</tr>
+<tr>
+<td>
+bar_color</td>
+<td>
+EnumAbilityColor</td>
+<td>
+<code>
+"light_gray"</code>
+</td>
+<td>
+Changes the color of the ability in the ability bar</td>
+</tr>
+<tr>
+<td>
+additional_data</td>
+<td>
+CompoundNBT</td>
+<td>
+<code>
+{}</code>
+</td>
+<td>
+You can store additional data here, especially useful if you use scripts and want to mark certain abilities</td>
+</tr>
+<tr>
+<td>
+hotbar_element</td>
+<td>
+RenderGameOverlayEvent$ElementType</td>
+<td>
+<code>
+"health"</code>
+</td>
+<td>
+Specified the hotbar element which shall be changed. Possible values: "all", "helmet", "portal", "crosshairs", "bosshealth", "bossinfo", "armor", "health", "food", "air", "hotbar", "experience", "text", "healthmount", "jumpbar", "chat", "player_list", "debug", "potion_icons", "subtitles", "fps_graph", "vignette"</td>
+</tr>
+<tr>
+<td>
+texture</td>
+<td>
+ResourceLocation</td>
+<td>
+<code>
+"minecraft:textures/gui/icons.png"</code>
+</td>
+<td>
+Determines texture for overriding the hotbars one.</td>
+</tr>
+</tbody>
+</table>
+<h3>
+Example:</h3>
+<pre class="json-block" id="threecore:custom_hotbar_example">
+</pre>
+<script>
+var json = JSON.parse('{"example_ability":{"ability":"threecore:custom_hotbar",  "show_in_bar": false,  "hidden": true,  "title": {"translate":"ability.threecore.custom_hotbar"},  "icon": {"type":"threecore:item","item":"minecraft:stick","count":1},  "bar_color": "light_gray",  "additional_data": {},  "hotbar_element": "health",  "texture": "minecraft:textures/gui/icons.png"}}'); document.getElementById('threecore:custom_hotbar_example').innerHTML = JSON.stringify(json, undefined, 2);</script>
+</div>
+<hr>
+
+<div id="threecore:opening_nbt_timer">
+<h2>
+Open/Close<code>
+threecore:opening_nbt_timer</code>
+</h2>
+<h3>
+Data Settings:</h3>
+<table>
+<thead>
+<tr>
+<th>
+Setting</th>
+<th>
+Type</th>
+<th>
+Fallback Value</th>
+<th>
+Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+show_in_bar</td>
+<td>
+Boolean</td>
+<td>
+<code>
+false</code>
+</td>
+<td>
+Determines if this ability should be displayed in the ability bar without a condition that displays it there.</td>
+</tr>
+<tr>
+<td>
+hidden</td>
+<td>
+Boolean</td>
+<td>
+<code>
+false</code>
+</td>
+<td>
+If enabled, the ability will be invisible for the ability GUI & ability bar</td>
+</tr>
+<tr>
+<td>
+title</td>
+<td>
+ITextComponent</td>
+<td>
+<code>
+{"translate":"ability.threecore.opening_nbt_timer"}</code>
+</td>
+<td>
+Allows you to set a custom title for this ability</td>
+</tr>
+<tr>
+<td>
+icon</td>
+<td>
+IIcon</td>
+<td>
+<code>
+{"type":"threecore:item","item":"minecraft:iron_helmet","count":1}</code>
+</td>
+<td>
+Lets you customize the icon for the ability</td>
+</tr>
+<tr>
+<td>
+bar_color</td>
+<td>
+EnumAbilityColor</td>
+<td>
+<code>
+"light_gray"</code>
+</td>
+<td>
+Changes the color of the ability in the ability bar</td>
+</tr>
+<tr>
+<td>
+additional_data</td>
+<td>
+CompoundNBT</td>
+<td>
+<code>
+{}</code>
+</td>
+<td>
+You can store additional data here, especially useful if you use scripts and want to mark certain abilities</td>
+</tr>
+<tr>
+<td>
+max_timer</td>
+<td>
+Integer</td>
+<td>
+<code>
+10</code>
+</td>
+<td>
+Sets the maximum value for the timer, there it goes from 0 to this value-1. You define it in ticks (20 ticks = 1 second).</td>
+</tr>
+<tr>
+<td>
+nbt_tag</td>
+<td>
+String</td>
+<td>
+<code>
+"Opening"</code>
+</td>
+<td>
+Determines the nbt tag in the item which will be used.</td>
+</tr>
+</tbody>
+</table>
+<h3>
+Example:</h3>
+<pre class="json-block" id="threecore:opening_nbt_timer_example">
+</pre>
+<script>
+var json = JSON.parse('{"example_ability":{"ability":"threecore:opening_nbt_timer",  "show_in_bar": false,  "hidden": false,  "title": {"translate":"ability.threecore.opening_nbt_timer"},  "icon": {"type":"threecore:item","item":"minecraft:iron_helmet","count":1},  "bar_color": "light_gray",  "additional_data": {},  "max_timer": 10,  "nbt_tag": "Opening"}}'); document.getElementById('threecore:opening_nbt_timer_example').innerHTML = JSON.stringify(json, undefined, 2);</script>
+</div>
+<hr>
+
+<div id="threecore:model_layer">
+<h2>
+Model Layer<code>
+threecore:model_layer</code>
+</h2>
+<h3>
+Data Settings:</h3>
+<table>
+<thead>
+<tr>
+<th>
+Setting</th>
+<th>
+Type</th>
+<th>
+Fallback Value</th>
+<th>
+Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+show_in_bar</td>
+<td>
+Boolean</td>
+<td>
+<code>
+false</code>
+</td>
+<td>
+Determines if this ability should be displayed in the ability bar without a condition that displays it there.</td>
+</tr>
+<tr>
+<td>
+hidden</td>
+<td>
+Boolean</td>
+<td>
+<code>
+true</code>
+</td>
+<td>
+If enabled, the ability will be invisible for the ability GUI & ability bar</td>
+</tr>
+<tr>
+<td>
+title</td>
+<td>
+ITextComponent</td>
+<td>
+<code>
+{"translate":"ability.threecore.model_layer"}</code>
+</td>
+<td>
+Allows you to set a custom title for this ability</td>
+</tr>
+<tr>
+<td>
+icon</td>
+<td>
+IIcon</td>
+<td>
+<code>
+{"type":"threecore:item","item":"minecraft:barrier","count":1}</code>
+</td>
+<td>
+Lets you customize the icon for the ability</td>
+</tr>
+<tr>
+<td>
+bar_color</td>
+<td>
+EnumAbilityColor</td>
+<td>
+<code>
+"light_gray"</code>
+</td>
+<td>
+Changes the color of the ability in the ability bar</td>
+</tr>
+<tr>
+<td>
+additional_data</td>
+<td>
+CompoundNBT</td>
+<td>
+<code>
+{}</code>
+</td>
+<td>
+You can store additional data here, especially useful if you use scripts and want to mark certain abilities</td>
+</tr>
+<tr>
+<td>
+model_layer</td>
+<td>
+ResourceLocation</td>
+<td>
+<code>
+"hello:world"</code>
+</td>
+<td>
+Determines the id for the model layer this ability will look for. The model layer json file must be in 'assets/<namespace>/model_layers'.</td>
+</tr>
+</tbody>
+</table>
+<h3>
+Example:</h3>
+<pre class="json-block" id="threecore:model_layer_example">
+</pre>
+<script>
+var json = JSON.parse('{"example_ability":{"ability":"threecore:model_layer",  "show_in_bar": false,  "hidden": true,  "title": {"translate":"ability.threecore.model_layer"},  "icon": {"type":"threecore:item","item":"minecraft:barrier","count":1},  "bar_color": "light_gray",  "additional_data": {},  "model_layer": "hello:world"}}'); document.getElementById('threecore:model_layer_example').innerHTML = JSON.stringify(json, undefined, 2);</script>
+</div>
+<hr>
+
+<div id="threecore:projectile">
+<h2>
+Projectile<code>
+threecore:projectile</code>
+</h2>
+<h3>
+Data Settings:</h3>
+<table>
+<thead>
+<tr>
+<th>
+Setting</th>
+<th>
+Type</th>
+<th>
+Fallback Value</th>
+<th>
+Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+show_in_bar</td>
+<td>
+Boolean</td>
+<td>
+<code>
+false</code>
+</td>
+<td>
+Determines if this ability should be displayed in the ability bar without a condition that displays it there.</td>
+</tr>
+<tr>
+<td>
+hidden</td>
+<td>
+Boolean</td>
+<td>
+<code>
+false</code>
+</td>
+<td>
+If enabled, the ability will be invisible for the ability GUI & ability bar</td>
+</tr>
+<tr>
+<td>
+title</td>
+<td>
+ITextComponent</td>
+<td>
+<code>
+{"translate":"ability.threecore.projectile"}</code>
+</td>
+<td>
+Allows you to set a custom title for this ability</td>
+</tr>
+<tr>
+<td>
+icon</td>
+<td>
+IIcon</td>
+<td>
+<code>
+{"type":"threecore:item","item":"minecraft:snowball","count":1}</code>
+</td>
+<td>
+Lets you customize the icon for the ability</td>
+</tr>
+<tr>
+<td>
+bar_color</td>
+<td>
+EnumAbilityColor</td>
+<td>
+<code>
+"light_gray"</code>
+</td>
+<td>
+Changes the color of the ability in the ability bar</td>
+</tr>
+<tr>
+<td>
+additional_data</td>
+<td>
+CompoundNBT</td>
+<td>
+<code>
+{}</code>
+</td>
+<td>
+You can store additional data here, especially useful if you use scripts and want to mark certain abilities</td>
+</tr>
+<tr>
+<td>
+entity_type</td>
+<td>
+EntityType<?></td>
+<td>
+<code>
+"minecraft:snowball"</code>
+</td>
+<td>
+Determines the entity that will be spawned</td>
+</tr>
+<tr>
+<td>
+entity_data</td>
+<td>
+CompoundNBT</td>
+<td>
+<code>
+{}</code>
+</td>
+<td>
+NBT tag for the entity that will be spawned</td>
+</tr>
+<tr>
+<td>
+inaccuracy</td>
+<td>
+Float</td>
+<td>
+<code>
+0.0</code>
+</td>
+<td>
+Determines the inaccuracy when shooting the projectile</td>
+</tr>
+<tr>
+<td>
+velocity</td>
+<td>
+Float</td>
+<td>
+<code>
+1.5</code>
+</td>
+<td>
+Determines the velocity when shooting the projectile</td>
+</tr>
+</tbody>
+</table>
+<h3>
+Example:</h3>
+<pre class="json-block" id="threecore:projectile_example">
+</pre>
+<script>
+var json = JSON.parse('{"example_ability":{"ability":"threecore:projectile",  "show_in_bar": false,  "hidden": false,  "title": {"translate":"ability.threecore.projectile"},  "icon": {"type":"threecore:item","item":"minecraft:snowball","count":1},  "bar_color": "light_gray",  "additional_data": {},  "entity_type": "minecraft:snowball",  "entity_data": {},  "inaccuracy": 0.0,  "velocity": 1.5}}'); document.getElementById('threecore:projectile_example').innerHTML = JSON.stringify(json, undefined, 2);</script>
+</div>
+<hr>
+
+<div id="threecore:damage_immunity">
+<h2>
+Damage Immunity<code>
+threecore:damage_immunity</code>
+</h2>
+<h3>
+Data Settings:</h3>
+<table>
+<thead>
+<tr>
+<th>
+Setting</th>
+<th>
+Type</th>
+<th>
+Fallback Value</th>
+<th>
+Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+show_in_bar</td>
+<td>
+Boolean</td>
+<td>
+<code>
+false</code>
+</td>
+<td>
+Determines if this ability should be displayed in the ability bar without a condition that displays it there.</td>
+</tr>
+<tr>
+<td>
+hidden</td>
+<td>
+Boolean</td>
+<td>
+<code>
+false</code>
+</td>
+<td>
+If enabled, the ability will be invisible for the ability GUI & ability bar</td>
+</tr>
+<tr>
+<td>
+title</td>
+<td>
+ITextComponent</td>
+<td>
+<code>
+{"translate":"ability.threecore.damage_immunity"}</code>
+</td>
+<td>
+Allows you to set a custom title for this ability</td>
+</tr>
+<tr>
+<td>
+icon</td>
+<td>
+IIcon</td>
+<td>
+<code>
+{"type":"threecore:item","item":"minecraft:barrier","count":1}</code>
+</td>
+<td>
+Lets you customize the icon for the ability</td>
+</tr>
+<tr>
+<td>
+bar_color</td>
+<td>
+EnumAbilityColor</td>
+<td>
+<code>
+"light_gray"</code>
+</td>
+<td>
+Changes the color of the ability in the ability bar</td>
+</tr>
+<tr>
+<td>
+additional_data</td>
+<td>
+CompoundNBT</td>
+<td>
+<code>
+{}</code>
+</td>
+<td>
+You can store additional data here, especially useful if you use scripts and want to mark certain abilities</td>
+</tr>
+<tr>
+<td>
+damage_sources</td>
+<td>
+String[]</td>
+<td>
+<code>
+["lightningBolt","cactus"]</code>
+</td>
+<td>
+Determines which damage sources have no effect on the entity</td>
+</tr>
+</tbody>
+</table>
+<h3>
+Example:</h3>
+<pre class="json-block" id="threecore:damage_immunity_example">
+</pre>
+<script>
+var json = JSON.parse('{"example_ability":{"ability":"threecore:damage_immunity",  "show_in_bar": false,  "hidden": false,  "title": {"translate":"ability.threecore.damage_immunity"},  "icon": {"type":"threecore:item","item":"minecraft:barrier","count":1},  "bar_color": "light_gray",  "additional_data": {},  "damage_sources": ["lightningBolt","cactus"]}}'); document.getElementById('threecore:damage_immunity_example').innerHTML = JSON.stringify(json, undefined, 2);</script>
+</div>
+<hr>
+
+<div id="threecore:potion_effect">
+<h2>
+Potion Effect<code>
+threecore:potion_effect</code>
+</h2>
+<h3>
+Data Settings:</h3>
+<table>
+<thead>
+<tr>
+<th>
+Setting</th>
+<th>
+Type</th>
+<th>
+Fallback Value</th>
+<th>
+Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+show_in_bar</td>
+<td>
+Boolean</td>
+<td>
+<code>
+false</code>
+</td>
+<td>
+Determines if this ability should be displayed in the ability bar without a condition that displays it there.</td>
+</tr>
+<tr>
+<td>
+hidden</td>
+<td>
+Boolean</td>
+<td>
+<code>
+false</code>
+</td>
+<td>
+If enabled, the ability will be invisible for the ability GUI & ability bar</td>
+</tr>
+<tr>
+<td>
+title</td>
+<td>
+ITextComponent</td>
+<td>
+<code>
+{"translate":"ability.threecore.potion_effect"}</code>
+</td>
+<td>
+Allows you to set a custom title for this ability</td>
+</tr>
+<tr>
+<td>
+icon</td>
+<td>
+IIcon</td>
+<td>
+<code>
+{"type":"threecore:item","item":"minecraft:potion","count":1}</code>
+</td>
+<td>
+Lets you customize the icon for the ability</td>
+</tr>
+<tr>
+<td>
+bar_color</td>
+<td>
+EnumAbilityColor</td>
+<td>
+<code>
+"light_gray"</code>
+</td>
+<td>
+Changes the color of the ability in the ability bar</td>
+</tr>
+<tr>
+<td>
+additional_data</td>
+<td>
+CompoundNBT</td>
+<td>
+<code>
+{}</code>
+</td>
+<td>
+You can store additional data here, especially useful if you use scripts and want to mark certain abilities</td>
+</tr>
+<tr>
+<td>
+effect</td>
+<td>
+Effect</td>
+<td>
+<code>
+"minecraft:water_breathing"</code>
+</td>
+<td>
+Determines the type of effec the entity will get</td>
+</tr>
+<tr>
+<td>
+duration</td>
+<td>
+Integer</td>
+<td>
+<code>
+20</code>
+</td>
+<td>
+Duration for the effect</td>
+</tr>
+<tr>
+<td>
+amplifier</td>
+<td>
+Integer</td>
+<td>
+<code>
+0</code>
+</td>
+<td>
+The amplifier/level for the effect</td>
+</tr>
+<tr>
+<td>
+show_particles</td>
+<td>
+Boolean</td>
+<td>
+<code>
+false</code>
+</td>
+<td>
+Determines if the particles should display</td>
+</tr>
+<tr>
+<td>
+show_icon</td>
+<td>
+Boolean</td>
+<td>
+<code>
+true</code>
+</td>
+<td>
+Determines if the icon should display/render</td>
+</tr>
+</tbody>
+</table>
+<h3>
+Example:</h3>
+<pre class="json-block" id="threecore:potion_effect_example">
+</pre>
+<script>
+var json = JSON.parse('{"example_ability":{"ability":"threecore:potion_effect",  "show_in_bar": false,  "hidden": false,  "title": {"translate":"ability.threecore.potion_effect"},  "icon": {"type":"threecore:item","item":"minecraft:potion","count":1},  "bar_color": "light_gray",  "additional_data": {},  "effect": "minecraft:water_breathing",  "duration": 20,  "amplifier": 0,  "show_particles": false,  "show_icon": true}}'); document.getElementById('threecore:potion_effect_example').innerHTML = JSON.stringify(json, undefined, 2);</script>
+</div>
+<hr>
+
+<div id="threecore:multi_jump">
+<h2>
+Multi Jump<code>
+threecore:multi_jump</code>
+</h2>
+<h3>
+Data Settings:</h3>
+<table>
+<thead>
+<tr>
+<th>
+Setting</th>
+<th>
+Type</th>
+<th>
+Fallback Value</th>
+<th>
+Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+show_in_bar</td>
+<td>
+Boolean</td>
+<td>
+<code>
+false</code>
+</td>
+<td>
+Determines if this ability should be displayed in the ability bar without a condition that displays it there.</td>
+</tr>
+<tr>
+<td>
+hidden</td>
+<td>
+Boolean</td>
+<td>
+<code>
+false</code>
+</td>
+<td>
+If enabled, the ability will be invisible for the ability GUI & ability bar</td>
+</tr>
+<tr>
+<td>
+title</td>
+<td>
+ITextComponent</td>
+<td>
+<code>
+{"translate":"ability.threecore.multi_jump"}</code>
+</td>
+<td>
+Allows you to set a custom title for this ability</td>
+</tr>
+<tr>
+<td>
+icon</td>
+<td>
+IIcon</td>
+<td>
+<code>
+{"type":"threecore:texture","texture":"threecore:textures/gui/icons.png","u":144,"v":16,"width":16,"height":16,"texture_width":256,"texture_height":256}</code>
+</td>
+<td>
+Lets you customize the icon for the ability</td>
+</tr>
+<tr>
+<td>
+bar_color</td>
+<td>
+EnumAbilityColor</td>
+<td>
+<code>
+"light_gray"</code>
+</td>
+<td>
+Changes the color of the ability in the ability bar</td>
+</tr>
+<tr>
+<td>
+additional_data</td>
+<td>
+CompoundNBT</td>
+<td>
+<code>
+{}</code>
+</td>
+<td>
+You can store additional data here, especially useful if you use scripts and want to mark certain abilities</td>
+</tr>
+<tr>
+<td>
+jumps</td>
+<td>
+Integer</td>
+<td>
+<code>
+2</code>
+</td>
+<td>
+Determines how often the player can jump in the air</td>
+</tr>
+</tbody>
+</table>
+<h3>
+Example:</h3>
+<pre class="json-block" id="threecore:multi_jump_example">
+</pre>
+<script>
+var json = JSON.parse('{"example_ability":{"ability":"threecore:multi_jump",  "show_in_bar": false,  "hidden": false,  "title": {"translate":"ability.threecore.multi_jump"},  "icon": {"type":"threecore:texture","texture":"threecore:textures/gui/icons.png","u":144,"v":16,"width":16,"height":16,"texture_width":256,"texture_height":256},  "bar_color": "light_gray",  "additional_data": {},  "jumps": 2}}'); document.getElementById('threecore:multi_jump_example').innerHTML = JSON.stringify(json, undefined, 2);</script>
+</div>
+<hr>
+
+<div id="threecore:name_change">
+<h2>
+Name Change<code>
+threecore:name_change</code>
+</h2>
+<h3>
+Data Settings:</h3>
+<table>
+<thead>
+<tr>
+<th>
+Setting</th>
+<th>
+Type</th>
+<th>
+Fallback Value</th>
+<th>
+Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+show_in_bar</td>
+<td>
+Boolean</td>
+<td>
+<code>
+false</code>
+</td>
+<td>
+Determines if this ability should be displayed in the ability bar without a condition that displays it there.</td>
+</tr>
+<tr>
+<td>
+hidden</td>
+<td>
+Boolean</td>
+<td>
+<code>
+true</code>
+</td>
+<td>
+If enabled, the ability will be invisible for the ability GUI & ability bar</td>
+</tr>
+<tr>
+<td>
+title</td>
+<td>
+ITextComponent</td>
+<td>
+<code>
+{"translate":"ability.threecore.name_change"}</code>
+</td>
+<td>
+Allows you to set a custom title for this ability</td>
+</tr>
+<tr>
+<td>
+icon</td>
+<td>
+IIcon</td>
+<td>
+<code>
+{"type":"threecore:item","item":"minecraft:barrier","count":1}</code>
+</td>
+<td>
+Lets you customize the icon for the ability</td>
+</tr>
+<tr>
+<td>
+bar_color</td>
+<td>
+EnumAbilityColor</td>
+<td>
+<code>
+"light_gray"</code>
+</td>
+<td>
+Changes the color of the ability in the ability bar</td>
+</tr>
+<tr>
+<td>
+additional_data</td>
+<td>
+CompoundNBT</td>
+<td>
+<code>
+{}</code>
+</td>
+<td>
+You can store additional data here, especially useful if you use scripts and want to mark certain abilities</td>
+</tr>
+<tr>
+<td>
+name</td>
+<td>
+ITextComponent</td>
+<td>
+<code>
+{"text":"???"}</code>
+</td>
+<td>
+The name which will render on the entity</td>
+</tr>
+</tbody>
+</table>
+<h3>
+Example:</h3>
+<pre class="json-block" id="threecore:name_change_example">
+</pre>
+<script>
+var json = JSON.parse('{"example_ability":{"ability":"threecore:name_change",  "show_in_bar": false,  "hidden": true,  "title": {"translate":"ability.threecore.name_change"},  "icon": {"type":"threecore:item","item":"minecraft:barrier","count":1},  "bar_color": "light_gray",  "additional_data": {},  "name": {"text":"???"}}}'); document.getElementById('threecore:name_change_example').innerHTML = JSON.stringify(json, undefined, 2);</script>
+</div>
+<hr>
+
+<div id="threecore:hud">
+<h2>
+HUD<code>
+threecore:hud</code>
+</h2>
+<h3>
+Data Settings:</h3>
+<table>
+<thead>
+<tr>
+<th>
+Setting</th>
+<th>
+Type</th>
+<th>
+Fallback Value</th>
+<th>
+Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+show_in_bar</td>
+<td>
+Boolean</td>
+<td>
+<code>
+false</code>
+</td>
+<td>
+Determines if this ability should be displayed in the ability bar without a condition that displays it there.</td>
+</tr>
+<tr>
+<td>
+hidden</td>
+<td>
+Boolean</td>
+<td>
+<code>
+true</code>
+</td>
+<td>
+If enabled, the ability will be invisible for the ability GUI & ability bar</td>
+</tr>
+<tr>
+<td>
+title</td>
+<td>
+ITextComponent</td>
+<td>
+<code>
+{"translate":"ability.threecore.hud"}</code>
+</td>
+<td>
+Allows you to set a custom title for this ability</td>
+</tr>
+<tr>
+<td>
+icon</td>
+<td>
+IIcon</td>
+<td>
+<code>
+{"type":"threecore:item","item":"minecraft:barrier","count":1}</code>
+</td>
+<td>
+Lets you customize the icon for the ability</td>
+</tr>
+<tr>
+<td>
+bar_color</td>
+<td>
+EnumAbilityColor</td>
+<td>
+<code>
+"light_gray"</code>
+</td>
+<td>
+Changes the color of the ability in the ability bar</td>
+</tr>
+<tr>
+<td>
+additional_data</td>
+<td>
+CompoundNBT</td>
+<td>
+<code>
+{}</code>
+</td>
+<td>
+You can store additional data here, especially useful if you use scripts and want to mark certain abilities</td>
+</tr>
+<tr>
+<td>
+hud</td>
+<td>
+ResourceLocation</td>
+<td>
+<code>
+"minecraft:textures/misc/pumpkinblur.png"</code>
+</td>
+<td>
+Texture for the hud</td>
+</tr>
+</tbody>
+</table>
+<h3>
+Example:</h3>
+<pre class="json-block" id="threecore:hud_example">
+</pre>
+<script>
+var json = JSON.parse('{"example_ability":{"ability":"threecore:hud",  "show_in_bar": false,  "hidden": true,  "title": {"translate":"ability.threecore.hud"},  "icon": {"type":"threecore:item","item":"minecraft:barrier","count":1},  "bar_color": "light_gray",  "additional_data": {},  "hud": "minecraft:textures/misc/pumpkinblur.png"}}'); document.getElementById('threecore:hud_example').innerHTML = JSON.stringify(json, undefined, 2);</script>
+</div>
+<hr>
+
+<div id="threecore:skin_change">
+<h2>
+Skin Change<code>
+threecore:skin_change</code>
+</h2>
+<h3>
+Data Settings:</h3>
+<table>
+<thead>
+<tr>
+<th>
+Setting</th>
+<th>
+Type</th>
+<th>
+Fallback Value</th>
+<th>
+Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+show_in_bar</td>
+<td>
+Boolean</td>
+<td>
+<code>
+false</code>
+</td>
+<td>
+Determines if this ability should be displayed in the ability bar without a condition that displays it there.</td>
+</tr>
+<tr>
+<td>
+hidden</td>
+<td>
+Boolean</td>
+<td>
+<code>
+true</code>
+</td>
+<td>
+If enabled, the ability will be invisible for the ability GUI & ability bar</td>
+</tr>
+<tr>
+<td>
+title</td>
+<td>
+ITextComponent</td>
+<td>
+<code>
+{"translate":"ability.threecore.skin_change"}</code>
+</td>
+<td>
+Allows you to set a custom title for this ability</td>
+</tr>
+<tr>
+<td>
+icon</td>
+<td>
+IIcon</td>
+<td>
+<code>
+{"type":"threecore:item","item":"minecraft:barrier","count":1}</code>
+</td>
+<td>
+Lets you customize the icon for the ability</td>
+</tr>
+<tr>
+<td>
+bar_color</td>
+<td>
+EnumAbilityColor</td>
+<td>
+<code>
+"light_gray"</code>
+</td>
+<td>
+Changes the color of the ability in the ability bar</td>
+</tr>
+<tr>
+<td>
+additional_data</td>
+<td>
+CompoundNBT</td>
+<td>
+<code>
+{}</code>
+</td>
+<td>
+You can store additional data here, especially useful if you use scripts and want to mark certain abilities</td>
+</tr>
+<tr>
+<td>
+texture</td>
+<td>
+ResourceLocation</td>
+<td>
+<code>
+"minecraft:textures/entity/zombie/drowned.png"</code>
+</td>
+<td>
+Texture for the new player skin</td>
+</tr>
+<tr>
+<td>
+priority</td>
+<td>
+Integer</td>
+<td>
+<code>
+50</code>
+</td>
+<td>
+Priority for the skin (in case multiple skin changes are applied, the one with the highest priority will be used)</td>
+</tr>
+</tbody>
+</table>
+<h3>
+Example:</h3>
+<pre class="json-block" id="threecore:skin_change_example">
+</pre>
+<script>
+var json = JSON.parse('{"example_ability":{"ability":"threecore:skin_change",  "show_in_bar": false,  "hidden": true,  "title": {"translate":"ability.threecore.skin_change"},  "icon": {"type":"threecore:item","item":"minecraft:barrier","count":1},  "bar_color": "light_gray",  "additional_data": {},  "texture": "minecraft:textures/entity/zombie/drowned.png",  "priority": 50}}'); document.getElementById('threecore:skin_change_example').innerHTML = JSON.stringify(json, undefined, 2);</script>
+</div>
+<hr>
+
+<div id="threecore:hide_body_parts">
+<h2>
+Hide Body Parts<code>
+threecore:hide_body_parts</code>
+</h2>
+<h3>
+Data Settings:</h3>
+<table>
+<thead>
+<tr>
+<th>
+Setting</th>
+<th>
+Type</th>
+<th>
+Fallback Value</th>
+<th>
+Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+show_in_bar</td>
+<td>
+Boolean</td>
+<td>
+<code>
+false</code>
+</td>
+<td>
+Determines if this ability should be displayed in the ability bar without a condition that displays it there.</td>
+</tr>
+<tr>
+<td>
+hidden</td>
+<td>
+Boolean</td>
+<td>
+<code>
+true</code>
+</td>
+<td>
+If enabled, the ability will be invisible for the ability GUI & ability bar</td>
+</tr>
+<tr>
+<td>
+title</td>
+<td>
+ITextComponent</td>
+<td>
+<code>
+{"translate":"ability.threecore.hide_body_parts"}</code>
+</td>
+<td>
+Allows you to set a custom title for this ability</td>
+</tr>
+<tr>
+<td>
+icon</td>
+<td>
+IIcon</td>
+<td>
+<code>
+{"type":"threecore:item","item":"minecraft:barrier","count":1}</code>
+</td>
+<td>
+Lets you customize the icon for the ability</td>
+</tr>
+<tr>
+<td>
+bar_color</td>
+<td>
+EnumAbilityColor</td>
+<td>
+<code>
+"light_gray"</code>
+</td>
+<td>
+Changes the color of the ability in the ability bar</td>
+</tr>
+<tr>
+<td>
+additional_data</td>
+<td>
+CompoundNBT</td>
+<td>
+<code>
+{}</code>
+</td>
+<td>
+You can store additional data here, especially useful if you use scripts and want to mark certain abilities</td>
+</tr>
+<tr>
+<td>
+body_parts</td>
+<td>
+BodyPartListThreeData$BodyPart></td>
+<td>
+<code>
+["left_arm","left_arm_overlay"]</code>
+</td>
+<td>
+Determines which body parts should vanish. Available parts: head, head_overlay, chest, chest_overlay, right_arm, right_arm_overlay, left_arm, left_arm_overlay, right_leg, right_leg_overlay, left_leg, left_leg_overlay</td>
+</tr>
+<tr>
+<td>
+affects_first_person</td>
+<td>
+Boolean</td>
+<td>
+<code>
+true</code>
+</td>
+<td>
+Determines if your first person arm should disappear aswell (if it's disabled)</td>
+</tr>
+</tbody>
+</table>
+<h3>
+Example:</h3>
+<pre class="json-block" id="threecore:hide_body_parts_example">
+</pre>
+<script>
+var json = JSON.parse('{"example_ability":{"ability":"threecore:hide_body_parts",  "show_in_bar": false,  "hidden": true,  "title": {"translate":"ability.threecore.hide_body_parts"},  "icon": {"type":"threecore:item","item":"minecraft:barrier","count":1},  "bar_color": "light_gray",  "additional_data": {},  "body_parts": ["left_arm","left_arm_overlay"],  "affects_first_person": true}}'); document.getElementById('threecore:hide_body_parts_example').innerHTML = JSON.stringify(json, undefined, 2);</script>
+</div>
+<hr>
+
+<div id="threecore:change_ability_tab_texture">
+<h2>
+Change Ability Tab Texture<code>
+threecore:change_ability_tab_texture</code>
+</h2>
+<h3>
+Data Settings:</h3>
+<table>
+<thead>
+<tr>
+<th>
+Setting</th>
+<th>
+Type</th>
+<th>
+Fallback Value</th>
+<th>
+Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+show_in_bar</td>
+<td>
+Boolean</td>
+<td>
+<code>
+false</code>
+</td>
+<td>
+Determines if this ability should be displayed in the ability bar without a condition that displays it there.</td>
+</tr>
+<tr>
+<td>
+hidden</td>
+<td>
+Boolean</td>
+<td>
+<code>
+true</code>
+</td>
+<td>
+If enabled, the ability will be invisible for the ability GUI & ability bar</td>
+</tr>
+<tr>
+<td>
+title</td>
+<td>
+ITextComponent</td>
+<td>
+<code>
+{"translate":"ability.threecore.change_ability_tab_texture"}</code>
+</td>
+<td>
+Allows you to set a custom title for this ability</td>
+</tr>
+<tr>
+<td>
+icon</td>
+<td>
+IIcon</td>
+<td>
+<code>
+{"type":"threecore:item","item":"minecraft:barrier","count":1}</code>
+</td>
+<td>
+Lets you customize the icon for the ability</td>
+</tr>
+<tr>
+<td>
+bar_color</td>
+<td>
+EnumAbilityColor</td>
+<td>
+<code>
+"light_gray"</code>
+</td>
+<td>
+Changes the color of the ability in the ability bar</td>
+</tr>
+<tr>
+<td>
+additional_data</td>
+<td>
+CompoundNBT</td>
+<td>
+<code>
+{}</code>
+</td>
+<td>
+You can store additional data here, especially useful if you use scripts and want to mark certain abilities</td>
+</tr>
+<tr>
+<td>
+texture</td>
+<td>
+String</td>
+<td>
+<code>
+"minecraft:textures/block/red_wool.png"</code>
+</td>
+<td>
+Texture to set the ability tab to</td>
+</tr>
+</tbody>
+</table>
+<h3>
+Example:</h3>
+<pre class="json-block" id="threecore:change_ability_tab_texture_example">
+</pre>
+<script>
+var json = JSON.parse('{"example_ability":{"ability":"threecore:change_ability_tab_texture",  "show_in_bar": false,  "hidden": true,  "title": {"translate":"ability.threecore.change_ability_tab_texture"},  "icon": {"type":"threecore:item","item":"minecraft:barrier","count":1},  "bar_color": "light_gray",  "additional_data": {},  "texture": "minecraft:textures/block/red_wool.png"}}'); document.getElementById('threecore:change_ability_tab_texture_example').innerHTML = JSON.stringify(json, undefined, 2);</script>
+</div>
+<hr>
+
+<div id="threecore:energy">
+<h2>
+Energy<code>
+threecore:energy</code>
+</h2>
+<h3>
+Data Settings:</h3>
+<table>
+<thead>
+<tr>
+<th>
+Setting</th>
+<th>
+Type</th>
+<th>
+Fallback Value</th>
+<th>
+Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+show_in_bar</td>
+<td>
+Boolean</td>
+<td>
+<code>
+false</code>
+</td>
+<td>
+Determines if this ability should be displayed in the ability bar without a condition that displays it there.</td>
+</tr>
+<tr>
+<td>
+hidden</td>
+<td>
+Boolean</td>
+<td>
+<code>
+false</code>
+</td>
+<td>
+If enabled, the ability will be invisible for the ability GUI & ability bar</td>
+</tr>
+<tr>
+<td>
+title</td>
+<td>
+ITextComponent</td>
+<td>
+<code>
+{"translate":"ability.threecore.energy"}</code>
+</td>
+<td>
+Allows you to set a custom title for this ability</td>
+</tr>
+<tr>
+<td>
+icon</td>
+<td>
+IIcon</td>
+<td>
+<code>
+{"type":"threecore:item","item":"minecraft:barrier","count":1}</code>
+</td>
+<td>
+Lets you customize the icon for the ability</td>
+</tr>
+<tr>
+<td>
+bar_color</td>
+<td>
+EnumAbilityColor</td>
+<td>
+<code>
+"light_gray"</code>
+</td>
+<td>
+Changes the color of the ability in the ability bar</td>
+</tr>
+<tr>
+<td>
+additional_data</td>
+<td>
+CompoundNBT</td>
+<td>
+<code>
+{}</code>
+</td>
+<td>
+You can store additional data here, especially useful if you use scripts and want to mark certain abilities</td>
+</tr>
+<tr>
+<td>
+max_amount</td>
+<td>
+Integer</td>
+<td>
+<code>
+100</code>
+</td>
+<td>
+Sets the maximum amount of energy</td>
+</tr>
+<tr>
+<td>
+charge_amount</td>
+<td>
+Integer</td>
+<td>
+<code>
+1</code>
+</td>
+<td>
+Sets the amount of energy created when the ability is enabled</td>
+</tr>
+<tr>
+<td>
+energy_texture_info</td>
+<td>
+Integer[]</td>
+<td>
+<code>
+[-13,3,10,0,10,-100]</code>
+</td>
+<td>
+Data to create the energy texture (x position, y position, x minimum, y minimum, x maximum, y maximum</td>
+</tr>
+<tr>
+<td>
+base_texture_info</td>
+<td>
+Integer[]</td>
+<td>
+<code>
+[-16,0,16,106]</code>
+</td>
+<td>
+Data to create the base texture (x position, y position, x size, y size</td>
+</tr>
+<tr>
+<td>
+energy_texture</td>
+<td>
+ResourceLocation</td>
+<td>
+<code>
+"minecraft:textures/block/blue_wool.png"</code>
+</td>
+<td>
+Path to the energy texture</td>
+</tr>
+<tr>
+<td>
+base_texture</td>
+<td>
+ResourceLocation</td>
+<td>
+<code>
+"minecraft:textures/block/gray_wool.png"</code>
+</td>
+<td>
+Path to the base texture</td>
+</tr>
+</tbody>
+</table>
+<h3>
+Example:</h3>
+<pre class="json-block" id="threecore:energy_example">
+</pre>
+<script>
+var json = JSON.parse('{"example_ability":{"ability":"threecore:energy",  "show_in_bar": false,  "hidden": false,  "title": {"translate":"ability.threecore.energy"},  "icon": {"type":"threecore:item","item":"minecraft:barrier","count":1},  "bar_color": "light_gray",  "additional_data": {},  "max_amount": 100,  "charge_amount": 1,  "energy_texture_info": [-13,3,10,0,10,-100],  "base_texture_info": [-16,0,16,106],  "energy_texture": "minecraft:textures/block/blue_wool.png",  "base_texture": "minecraft:textures/block/gray_wool.png"}}'); document.getElementById('threecore:energy_example').innerHTML = JSON.stringify(json, undefined, 2);</script>
+</div>
+<hr>
+
+<div id="threecore:drop_armor">
+<h2>
+Drop Armor<code>
+threecore:drop_armor</code>
+</h2>
+<h3>
+Data Settings:</h3>
+<table>
+<thead>
+<tr>
+<th>
+Setting</th>
+<th>
+Type</th>
+<th>
+Fallback Value</th>
+<th>
+Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+show_in_bar</td>
+<td>
+Boolean</td>
+<td>
+<code>
+false</code>
+</td>
+<td>
+Determines if this ability should be displayed in the ability bar without a condition that displays it there.</td>
+</tr>
+<tr>
+<td>
+hidden</td>
+<td>
+Boolean</td>
+<td>
+<code>
+true</code>
+</td>
+<td>
+If enabled, the ability will be invisible for the ability GUI & ability bar</td>
+</tr>
+<tr>
+<td>
+title</td>
+<td>
+ITextComponent</td>
+<td>
+<code>
+{"translate":"ability.threecore.drop_armor"}</code>
+</td>
+<td>
+Allows you to set a custom title for this ability</td>
+</tr>
+<tr>
+<td>
+icon</td>
+<td>
+IIcon</td>
+<td>
+<code>
+{"type":"threecore:item","item":"minecraft:barrier","count":1}</code>
+</td>
+<td>
+Lets you customize the icon for the ability</td>
+</tr>
+<tr>
+<td>
+bar_color</td>
+<td>
+EnumAbilityColor</td>
+<td>
+<code>
+"light_gray"</code>
+</td>
+<td>
+Changes the color of the ability in the ability bar</td>
+</tr>
+<tr>
+<td>
+additional_data</td>
+<td>
+CompoundNBT</td>
+<td>
+<code>
+{}</code>
+</td>
+<td>
+You can store additional data here, especially useful if you use scripts and want to mark certain abilities</td>
+</tr>
+</tbody>
+</table>
+<h3>
+Example:</h3>
+<pre class="json-block" id="threecore:drop_armor_example">
+</pre>
+<script>
+var json = JSON.parse('{"example_ability":{"ability":"threecore:drop_armor",  "show_in_bar": false,  "hidden": true,  "title": {"translate":"ability.threecore.drop_armor"},  "icon": {"type":"threecore:item","item":"minecraft:barrier","count":1},  "bar_color": "light_gray",  "additional_data": {}}}'); document.getElementById('threecore:drop_armor_example').innerHTML = JSON.stringify(json, undefined, 2);</script>
+</div>
+<hr>
+
+<div id="pymtech:regulator">
+<h2>
+Regulator<code>
+pymtech:regulator</code>
+</h2>
+<h3>
+Data Settings:</h3>
+<table>
+<thead>
+<tr>
+<th>
+Setting</th>
+<th>
+Type</th>
+<th>
+Fallback Value</th>
+<th>
+Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+show_in_bar</td>
+<td>
+Boolean</td>
+<td>
+<code>
+false</code>
+</td>
+<td>
+Determines if this ability should be displayed in the ability bar without a condition that displays it there.</td>
+</tr>
+<tr>
+<td>
+hidden</td>
+<td>
+Boolean</td>
+<td>
+<code>
+false</code>
+</td>
+<td>
+If enabled, the ability will be invisible for the ability GUI & ability bar</td>
+</tr>
+<tr>
+<td>
+title</td>
+<td>
+ITextComponent</td>
+<td>
+<code>
+{"translate":"ability.pymtech.regulator"}</code>
+</td>
+<td>
+Allows you to set a custom title for this ability</td>
+</tr>
+<tr>
+<td>
+icon</td>
+<td>
+IIcon</td>
+<td>
+<code>
+{"type":"threecore:item","item":"pymtech:regulator","count":1}</code>
+</td>
+<td>
+Lets you customize the icon for the ability</td>
+</tr>
+<tr>
+<td>
+bar_color</td>
+<td>
+EnumAbilityColor</td>
+<td>
+<code>
+"light_gray"</code>
+</td>
+<td>
+Changes the color of the ability in the ability bar</td>
+</tr>
+<tr>
+<td>
+additional_data</td>
+<td>
+CompoundNBT</td>
+<td>
+<code>
+{}</code>
+</td>
+<td>
+You can store additional data here, especially useful if you use scripts and want to mark certain abilities</td>
+</tr>
+</tbody>
+</table>
+<h3>
+Example:</h3>
+<pre class="json-block" id="pymtech:regulator_example">
+</pre>
+<script>
+var json = JSON.parse('{"example_ability":{"ability":"pymtech:regulator",  "show_in_bar": false,  "hidden": false,  "title": {"translate":"ability.pymtech.regulator"},  "icon": {"type":"threecore:item","item":"pymtech:regulator","count":1},  "bar_color": "light_gray",  "additional_data": {}}}'); document.getElementById('pymtech:regulator_example').innerHTML = JSON.stringify(json, undefined, 2);</script>
+</div>
+<hr>
+
+<div id="pymtech:regulator_tier2">
+<h2>
+Regulator<code>
+pymtech:regulator_tier2</code>
+</h2>
+<h3>
+Data Settings:</h3>
+<table>
+<thead>
+<tr>
+<th>
+Setting</th>
+<th>
+Type</th>
+<th>
+Fallback Value</th>
+<th>
+Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+show_in_bar</td>
+<td>
+Boolean</td>
+<td>
+<code>
+false</code>
+</td>
+<td>
+Determines if this ability should be displayed in the ability bar without a condition that displays it there.</td>
+</tr>
+<tr>
+<td>
+hidden</td>
+<td>
+Boolean</td>
+<td>
+<code>
+false</code>
+</td>
+<td>
+If enabled, the ability will be invisible for the ability GUI & ability bar</td>
+</tr>
+<tr>
+<td>
+title</td>
+<td>
+ITextComponent</td>
+<td>
+<code>
+{"translate":"ability.pymtech.regulator_tier2"}</code>
+</td>
+<td>
+Allows you to set a custom title for this ability</td>
+</tr>
+<tr>
+<td>
+icon</td>
+<td>
+IIcon</td>
+<td>
+<code>
+{"type":"threecore:item","item":"pymtech:regulator","count":1}</code>
+</td>
+<td>
+Lets you customize the icon for the ability</td>
+</tr>
+<tr>
+<td>
+bar_color</td>
+<td>
+EnumAbilityColor</td>
+<td>
+<code>
+"light_gray"</code>
+</td>
+<td>
+Changes the color of the ability in the ability bar</td>
+</tr>
+<tr>
+<td>
+additional_data</td>
+<td>
+CompoundNBT</td>
+<td>
+<code>
+{}</code>
+</td>
+<td>
+You can store additional data here, especially useful if you use scripts and want to mark certain abilities</td>
+</tr>
+<tr>
+<td>
+min_size</td>
+<td>
+Float</td>
+<td>
+<code>
+0.1</code>
+</td>
+<td>
+Determines the minimum size the player can choose</td>
+</tr>
+<tr>
+<td>
+max_size</td>
+<td>
+Float</td>
+<td>
+<code>
+8.0</code>
+</td>
+<td>
+Determines the maximum size the player can choose</td>
+</tr>
+</tbody>
+</table>
+<h3>
+Example:</h3>
+<pre class="json-block" id="pymtech:regulator_tier2_example">
+</pre>
+<script>
+var json = JSON.parse('{"example_ability":{"ability":"pymtech:regulator_tier2",  "show_in_bar": false,  "hidden": false,  "title": {"translate":"ability.pymtech.regulator_tier2"},  "icon": {"type":"threecore:item","item":"pymtech:regulator","count":1},  "bar_color": "light_gray",  "additional_data": {},  "min_size": 0.1,  "max_size": 8.0}}'); document.getElementById('pymtech:regulator_tier2_example').innerHTML = JSON.stringify(json, undefined, 2);</script>
+</div>
+<hr>
+
+<div id="pymtech:regulator_tier3">
+<h2>
+Regulator<code>
+pymtech:regulator_tier3</code>
+</h2>
+<h3>
+Data Settings:</h3>
+<table>
+<thead>
+<tr>
+<th>
+Setting</th>
+<th>
+Type</th>
+<th>
+Fallback Value</th>
+<th>
+Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+show_in_bar</td>
+<td>
+Boolean</td>
+<td>
+<code>
+false</code>
+</td>
+<td>
+Determines if this ability should be displayed in the ability bar without a condition that displays it there.</td>
+</tr>
+<tr>
+<td>
+hidden</td>
+<td>
+Boolean</td>
+<td>
+<code>
+false</code>
+</td>
+<td>
+If enabled, the ability will be invisible for the ability GUI & ability bar</td>
+</tr>
+<tr>
+<td>
+title</td>
+<td>
+ITextComponent</td>
+<td>
+<code>
+{"translate":"ability.pymtech.regulator_tier3"}</code>
+</td>
+<td>
+Allows you to set a custom title for this ability</td>
+</tr>
+<tr>
+<td>
+icon</td>
+<td>
+IIcon</td>
+<td>
+<code>
+{"type":"threecore:item","item":"pymtech:regulator","count":1}</code>
+</td>
+<td>
+Lets you customize the icon for the ability</td>
+</tr>
+<tr>
+<td>
+bar_color</td>
+<td>
+EnumAbilityColor</td>
+<td>
+<code>
+"light_gray"</code>
+</td>
+<td>
+Changes the color of the ability in the ability bar</td>
+</tr>
+<tr>
+<td>
+additional_data</td>
+<td>
+CompoundNBT</td>
+<td>
+<code>
+{}</code>
+</td>
+<td>
+You can store additional data here, especially useful if you use scripts and want to mark certain abilities</td>
+</tr>
+<tr>
+<td>
+min_size</td>
+<td>
+Float</td>
+<td>
+<code>
+0.1</code>
+</td>
+<td>
+Determines the minimum size the player can choose</td>
+</tr>
+<tr>
+<td>
+max_size</td>
+<td>
+Float</td>
+<td>
+<code>
+8.0</code>
+</td>
+<td>
+Determines the maximum size the player can choose</td>
+</tr>
+</tbody>
+</table>
+<h3>
+Example:</h3>
+<pre class="json-block" id="pymtech:regulator_tier3_example">
+</pre>
+<script>
+var json = JSON.parse('{"example_ability":{"ability":"pymtech:regulator_tier3",  "show_in_bar": false,  "hidden": false,  "title": {"translate":"ability.pymtech.regulator_tier3"},  "icon": {"type":"threecore:item","item":"pymtech:regulator","count":1},  "bar_color": "light_gray",  "additional_data": {},  "min_size": 0.1,  "max_size": 8.0}}'); document.getElementById('pymtech:regulator_tier3_example').innerHTML = JSON.stringify(json, undefined, 2);</script>
+</div>
+<hr>
+
+<div id="pymtech:pym_particle_size_change">
+<h2>
+Pym Particle Size Change<code>
+pymtech:pym_particle_size_change</code>
+</h2>
+<h3>
+Data Settings:</h3>
+<table>
+<thead>
+<tr>
+<th>
+Setting</th>
+<th>
+Type</th>
+<th>
+Fallback Value</th>
+<th>
+Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+show_in_bar</td>
+<td>
+Boolean</td>
+<td>
+<code>
+false</code>
+</td>
+<td>
+Determines if this ability should be displayed in the ability bar without a condition that displays it there.</td>
+</tr>
+<tr>
+<td>
+hidden</td>
+<td>
+Boolean</td>
+<td>
+<code>
+false</code>
+</td>
+<td>
+If enabled, the ability will be invisible for the ability GUI & ability bar</td>
+</tr>
+<tr>
+<td>
+title</td>
+<td>
+ITextComponent</td>
+<td>
+<code>
+{"translate":"ability.pymtech.pym_particle_size_change"}</code>
+</td>
+<td>
+Allows you to set a custom title for this ability</td>
+</tr>
+<tr>
+<td>
+icon</td>
+<td>
+IIcon</td>
+<td>
+<code>
+{"type":"pymtech:pym_particles","size":0.1}</code>
+</td>
+<td>
+Lets you customize the icon for the ability</td>
+</tr>
+<tr>
+<td>
+bar_color</td>
+<td>
+EnumAbilityColor</td>
+<td>
+<code>
+"light_gray"</code>
+</td>
+<td>
+Changes the color of the ability in the ability bar</td>
+</tr>
+<tr>
+<td>
+additional_data</td>
+<td>
+CompoundNBT</td>
+<td>
+<code>
+{}</code>
+</td>
+<td>
+You can store additional data here, especially useful if you use scripts and want to mark certain abilities</td>
+</tr>
+<tr>
+<td>
+regulator_ability</td>
+<td>
+String</td>
+<td>
+<code>
+""</code>
+</td>
+<td>
+The id of the linked regulator ability to use pym particles from</td>
+</tr>
+<tr>
+<td>
+size</td>
+<td>
+Float</td>
+<td>
+<code>
+0.1</code>
+</td>
+<td>
+The size this entity will change to</td>
+</tr>
+</tbody>
+</table>
+<h3>
+Example:</h3>
+<pre class="json-block" id="pymtech:pym_particle_size_change_example">
+</pre>
+<script>
+var json = JSON.parse('{"example_ability":{"ability":"pymtech:pym_particle_size_change",  "show_in_bar": false,  "hidden": false,  "title": {"translate":"ability.pymtech.pym_particle_size_change"},  "icon": {"type":"pymtech:pym_particles","size":0.1},  "bar_color": "light_gray",  "additional_data": {},  "regulator_ability": "",  "size": 0.1}}'); document.getElementById('pymtech:pym_particle_size_change_example').innerHTML = JSON.stringify(json, undefined, 2);</script>
+</div>
+</body>
+</html>

@@ -1,0 +1,2604 @@
+<html>
+<head>
+<title>
+Conditions</title>
+<style>
+table{font-family:arial, sans-serif;border-collapse:collapse;}
+td,th{border:1px solid #666666;text-align:left;padding:8px;min-width:45px;}
+th{background-color:#CCCCCC;}
+p{margin:0;}
+tr:nth-child(even){background-color:#D8D8D8;}
+tr:nth-child(odd){background-color:#EEEEEE;}
+td.true{background-color:#72FF85AA;}
+td.false{background-color:#FF6666AA;}
+td.other{background-color:#42A3FFAA;}
+td.error{color:#FF0000;}
+th,td.true,td.false,td.other{text-align:center;}</style>
+<link rel="shortcut icon" type="image/x-icon" href="https://i.imgur.com/am80ox1.png">
+
+<style>
+.json-block { background-color: lightgray; display: inline-block; border: 5px solid darkgray; padding: 10px }</style>
+</head>
+<body>
+<h1>
+Conditions</h1>
+<hr>
+
+<p>
+<h2>
+Overview</h2>
+<h3>
+ThreeCore</h3>
+<ul>
+<li>
+<a href="#threecore:action">
+Key must be pressed once to active this ability</a>
+</li>
+<li>
+<a href="#threecore:held">
+Key must be held to activate this ability</a>
+</li>
+<li>
+<a href="#threecore:toggle">
+Ability must be toggled with the key</a>
+</li>
+<li>
+<a href="#threecore:cooldown">
+Ability must be cooled down</a>
+</li>
+<li>
+<a href="#threecore:ability_enabled">
+/ ability must be enabled</a>
+</li>
+<li>
+<a href="#threecore:ability_unlocked">
+/ ability must be unlocked</a>
+</li>
+<li>
+<a href="#threecore:karma">
+Karma must be at least -2147483648</a>
+</li>
+<li>
+<a href="#threecore:xp_buy">
+5 experience points must be spent</a>
+</li>
+<li>
+<a href="#threecore:item_buy">
+An item must be spent</a>
+</li>
+<li>
+<a href="#threecore:equipment_slot">
+Item needs to be in the main hand slot</a>
+</li>
+<li>
+<a href="#threecore:xp">
+Karma must be at least 0</a>
+</li>
+<li>
+<a href="#threecore:wearing_item">
+Entity must wear specific items</a>
+</li>
+<li>
+<a href="#threecore:wearing_item_tag">
+Entity must wear items within the forge:ingots/iron tag</a>
+</li>
+<li>
+<a href="#threecore:item_integer_nbt">
+Item in HEAD slot must have specific value in Opening nbt tag</a>
+</li>
+<li>
+<a href="#threecore:eyes_in_fluid">
+Eyes are need to be covered by fluids in the NamedTag[minecraft:water] tag</a>
+</li>
+<li>
+<a href="#threecore:size">
+Size must be between 0.0 and 16.0</a>
+</li>
+<li>
+<a href="#threecore:abilities_locked">
+ abilities must be locked</a>
+</li>
+<li>
+<a href="#threecore:living_values">
+Entity HEALTH must be GREATER than 0.0</a>
+</li>
+<li>
+<a href="#threecore:has_potions">
+Entity must have  potion effects</a>
+</li>
+<li>
+<a href="#threecore:three_data">
+ThreeData value must be compared</a>
+</li>
+<li>
+<a href="#threecore:exclusive">
+Ability must be the only of its kind</a>
+</li>
+<li>
+<a href="#threecore:combo">
+Specific abilities must be used in specific order</a>
+</li>
+<li>
+<a href="#threecore:curios_slot">
+Item needs to be in specific Curios slot</a>
+</li>
+<li>
+<a href="#threecore:wearing_curios">
+Specific item must be in specific Curios slot</a>
+</li>
+</ul>
+</p>
+<hr>
+
+<div id="threecore:action">
+<h2>
+Key must be pressed once to active this ability<code>
+threecore:action</code>
+</h2>
+<h3>
+Data Settings:</h3>
+<table>
+<thead>
+<tr>
+<th>
+Setting</th>
+<th>
+Type</th>
+<th>
+Fallback Value</th>
+<th>
+Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+custom_title</td>
+<td>
+ITextComponent</td>
+<td>
+<code>
+{"text":"empty"}</code>
+</td>
+<td>
+A custom display name for the condition.</td>
+</tr>
+<tr>
+<td>
+invert</td>
+<td>
+Boolean</td>
+<td>
+<code>
+false</code>
+</td>
+<td>
+Lets you invert the condition</td>
+</tr>
+<tr>
+<td>
+enabling</td>
+<td>
+Boolean</td>
+<td>
+<code>
+true</code>
+</td>
+<td>
+If this condition enables. If false it instead decides whether the ability is unlocked.</td>
+</tr>
+<tr>
+<td>
+needs_key</td>
+<td>
+Boolean</td>
+<td>
+<code>
+true</code>
+</td>
+<td>
+If this condition requires a key</td>
+</tr>
+</tbody>
+</table>
+<h3>
+Example:</h3>
+<pre class="json-block" id="threecore:action_example">
+</pre>
+<script>
+var json = JSON.parse('[{"type":"threecore:action",  "custom_title": {"text":"empty"},  "invert": false,  "enabling": true,  "needs_key": true}]'); document.getElementById('threecore:action_example').innerHTML = JSON.stringify(json, undefined, 2);</script>
+</div>
+<hr>
+
+<div id="threecore:held">
+<h2>
+Key must be held to activate this ability<code>
+threecore:held</code>
+</h2>
+<h3>
+Data Settings:</h3>
+<table>
+<thead>
+<tr>
+<th>
+Setting</th>
+<th>
+Type</th>
+<th>
+Fallback Value</th>
+<th>
+Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+custom_title</td>
+<td>
+ITextComponent</td>
+<td>
+<code>
+{"text":"empty"}</code>
+</td>
+<td>
+A custom display name for the condition.</td>
+</tr>
+<tr>
+<td>
+invert</td>
+<td>
+Boolean</td>
+<td>
+<code>
+false</code>
+</td>
+<td>
+Lets you invert the condition</td>
+</tr>
+<tr>
+<td>
+enabling</td>
+<td>
+Boolean</td>
+<td>
+<code>
+true</code>
+</td>
+<td>
+If this condition enables. If false it instead decides whether the ability is unlocked.</td>
+</tr>
+<tr>
+<td>
+needs_key</td>
+<td>
+Boolean</td>
+<td>
+<code>
+true</code>
+</td>
+<td>
+If this condition requires a key</td>
+</tr>
+</tbody>
+</table>
+<h3>
+Example:</h3>
+<pre class="json-block" id="threecore:held_example">
+</pre>
+<script>
+var json = JSON.parse('[{"type":"threecore:held",  "custom_title": {"text":"empty"},  "invert": false,  "enabling": true,  "needs_key": true}]'); document.getElementById('threecore:held_example').innerHTML = JSON.stringify(json, undefined, 2);</script>
+</div>
+<hr>
+
+<div id="threecore:toggle">
+<h2>
+Ability must be toggled with the key<code>
+threecore:toggle</code>
+</h2>
+<h3>
+Data Settings:</h3>
+<table>
+<thead>
+<tr>
+<th>
+Setting</th>
+<th>
+Type</th>
+<th>
+Fallback Value</th>
+<th>
+Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+custom_title</td>
+<td>
+ITextComponent</td>
+<td>
+<code>
+{"text":"empty"}</code>
+</td>
+<td>
+A custom display name for the condition.</td>
+</tr>
+<tr>
+<td>
+invert</td>
+<td>
+Boolean</td>
+<td>
+<code>
+false</code>
+</td>
+<td>
+Lets you invert the condition</td>
+</tr>
+<tr>
+<td>
+enabling</td>
+<td>
+Boolean</td>
+<td>
+<code>
+true</code>
+</td>
+<td>
+If this condition enables. If false it instead decides whether the ability is unlocked.</td>
+</tr>
+<tr>
+<td>
+needs_key</td>
+<td>
+Boolean</td>
+<td>
+<code>
+true</code>
+</td>
+<td>
+If this condition requires a key</td>
+</tr>
+</tbody>
+</table>
+<h3>
+Example:</h3>
+<pre class="json-block" id="threecore:toggle_example">
+</pre>
+<script>
+var json = JSON.parse('[{"type":"threecore:toggle",  "custom_title": {"text":"empty"},  "invert": false,  "enabling": true,  "needs_key": true}]'); document.getElementById('threecore:toggle_example').innerHTML = JSON.stringify(json, undefined, 2);</script>
+</div>
+<hr>
+
+<div id="threecore:cooldown">
+<h2>
+Ability must be cooled down<code>
+threecore:cooldown</code>
+</h2>
+<h3>
+Data Settings:</h3>
+<table>
+<thead>
+<tr>
+<th>
+Setting</th>
+<th>
+Type</th>
+<th>
+Fallback Value</th>
+<th>
+Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+custom_title</td>
+<td>
+ITextComponent</td>
+<td>
+<code>
+{"text":"empty"}</code>
+</td>
+<td>
+A custom display name for the condition.</td>
+</tr>
+<tr>
+<td>
+invert</td>
+<td>
+Boolean</td>
+<td>
+<code>
+false</code>
+</td>
+<td>
+Lets you invert the condition</td>
+</tr>
+<tr>
+<td>
+enabling</td>
+<td>
+Boolean</td>
+<td>
+<code>
+false</code>
+</td>
+<td>
+If this condition enables. If false it instead decides whether the ability is unlocked.</td>
+</tr>
+<tr>
+<td>
+needs_key</td>
+<td>
+Boolean</td>
+<td>
+<code>
+false</code>
+</td>
+<td>
+If this condition requires a key</td>
+</tr>
+<tr>
+<td>
+cooldown</td>
+<td>
+Integer</td>
+<td>
+<code>
+0</code>
+</td>
+<td>
+Maximum cooldown for using this ability</td>
+</tr>
+</tbody>
+</table>
+<h3>
+Example:</h3>
+<pre class="json-block" id="threecore:cooldown_example">
+</pre>
+<script>
+var json = JSON.parse('[{"type":"threecore:cooldown",  "custom_title": {"text":"empty"},  "invert": false,  "enabling": false,  "needs_key": false,  "cooldown": 0}]'); document.getElementById('threecore:cooldown_example').innerHTML = JSON.stringify(json, undefined, 2);</script>
+</div>
+<hr>
+
+<div id="threecore:ability_enabled">
+<h2>
+/ ability must be enabled<code>
+threecore:ability_enabled</code>
+</h2>
+<h3>
+Data Settings:</h3>
+<table>
+<thead>
+<tr>
+<th>
+Setting</th>
+<th>
+Type</th>
+<th>
+Fallback Value</th>
+<th>
+Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+custom_title</td>
+<td>
+ITextComponent</td>
+<td>
+<code>
+{"text":"empty"}</code>
+</td>
+<td>
+A custom display name for the condition.</td>
+</tr>
+<tr>
+<td>
+invert</td>
+<td>
+Boolean</td>
+<td>
+<code>
+false</code>
+</td>
+<td>
+Lets you invert the condition</td>
+</tr>
+<tr>
+<td>
+enabling</td>
+<td>
+Boolean</td>
+<td>
+<code>
+false</code>
+</td>
+<td>
+If this condition enables. If false it instead decides whether the ability is unlocked.</td>
+</tr>
+<tr>
+<td>
+needs_key</td>
+<td>
+Boolean</td>
+<td>
+<code>
+false</code>
+</td>
+<td>
+If this condition requires a key</td>
+</tr>
+<tr>
+<td>
+ability_id</td>
+<td>
+String</td>
+<td>
+<code>
+""</code>
+</td>
+<td>
+The id for the ability that must be enabled for the condition to be true.</td>
+</tr>
+</tbody>
+</table>
+<h3>
+Example:</h3>
+<pre class="json-block" id="threecore:ability_enabled_example">
+</pre>
+<script>
+var json = JSON.parse('[{"type":"threecore:ability_enabled",  "custom_title": {"text":"empty"},  "invert": false,  "enabling": false,  "needs_key": false,  "ability_id": ""}]'); document.getElementById('threecore:ability_enabled_example').innerHTML = JSON.stringify(json, undefined, 2);</script>
+</div>
+<hr>
+
+<div id="threecore:ability_unlocked">
+<h2>
+/ ability must be unlocked<code>
+threecore:ability_unlocked</code>
+</h2>
+<h3>
+Data Settings:</h3>
+<table>
+<thead>
+<tr>
+<th>
+Setting</th>
+<th>
+Type</th>
+<th>
+Fallback Value</th>
+<th>
+Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+custom_title</td>
+<td>
+ITextComponent</td>
+<td>
+<code>
+{"text":"empty"}</code>
+</td>
+<td>
+A custom display name for the condition.</td>
+</tr>
+<tr>
+<td>
+invert</td>
+<td>
+Boolean</td>
+<td>
+<code>
+false</code>
+</td>
+<td>
+Lets you invert the condition</td>
+</tr>
+<tr>
+<td>
+enabling</td>
+<td>
+Boolean</td>
+<td>
+<code>
+false</code>
+</td>
+<td>
+If this condition enables. If false it instead decides whether the ability is unlocked.</td>
+</tr>
+<tr>
+<td>
+needs_key</td>
+<td>
+Boolean</td>
+<td>
+<code>
+false</code>
+</td>
+<td>
+If this condition requires a key</td>
+</tr>
+<tr>
+<td>
+ability_id</td>
+<td>
+String</td>
+<td>
+<code>
+""</code>
+</td>
+<td>
+The id for the ability that must be unlocked for the condition to be true.</td>
+</tr>
+</tbody>
+</table>
+<h3>
+Example:</h3>
+<pre class="json-block" id="threecore:ability_unlocked_example">
+</pre>
+<script>
+var json = JSON.parse('[{"type":"threecore:ability_unlocked",  "custom_title": {"text":"empty"},  "invert": false,  "enabling": false,  "needs_key": false,  "ability_id": ""}]'); document.getElementById('threecore:ability_unlocked_example').innerHTML = JSON.stringify(json, undefined, 2);</script>
+</div>
+<hr>
+
+<div id="threecore:karma">
+<h2>
+Karma must be at least -2147483648<code>
+threecore:karma</code>
+</h2>
+<h3>
+Data Settings:</h3>
+<table>
+<thead>
+<tr>
+<th>
+Setting</th>
+<th>
+Type</th>
+<th>
+Fallback Value</th>
+<th>
+Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+custom_title</td>
+<td>
+ITextComponent</td>
+<td>
+<code>
+{"text":"empty"}</code>
+</td>
+<td>
+A custom display name for the condition.</td>
+</tr>
+<tr>
+<td>
+invert</td>
+<td>
+Boolean</td>
+<td>
+<code>
+false</code>
+</td>
+<td>
+Lets you invert the condition</td>
+</tr>
+<tr>
+<td>
+enabling</td>
+<td>
+Boolean</td>
+<td>
+<code>
+false</code>
+</td>
+<td>
+If this condition enables. If false it instead decides whether the ability is unlocked.</td>
+</tr>
+<tr>
+<td>
+needs_key</td>
+<td>
+Boolean</td>
+<td>
+<code>
+false</code>
+</td>
+<td>
+If this condition requires a key</td>
+</tr>
+<tr>
+<td>
+min</td>
+<td>
+Integer</td>
+<td>
+<code>
+-2147483648</code>
+</td>
+<td>
+The minimum karma required for the condition to be true.</td>
+</tr>
+<tr>
+<td>
+max</td>
+<td>
+Integer</td>
+<td>
+<code>
+2147483647</code>
+</td>
+<td>
+The maximum karma required for the condition to be true.</td>
+</tr>
+</tbody>
+</table>
+<h3>
+Example:</h3>
+<pre class="json-block" id="threecore:karma_example">
+</pre>
+<script>
+var json = JSON.parse('[{"type":"threecore:karma",  "custom_title": {"text":"empty"},  "invert": false,  "enabling": false,  "needs_key": false,  "min": -2147483648,  "max": 2147483647}]'); document.getElementById('threecore:karma_example').innerHTML = JSON.stringify(json, undefined, 2);</script>
+</div>
+<hr>
+
+<div id="threecore:xp_buy">
+<h2>
+5 experience points must be spent<code>
+threecore:xp_buy</code>
+</h2>
+<h3>
+Data Settings:</h3>
+<table>
+<thead>
+<tr>
+<th>
+Setting</th>
+<th>
+Type</th>
+<th>
+Fallback Value</th>
+<th>
+Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+custom_title</td>
+<td>
+ITextComponent</td>
+<td>
+<code>
+{"text":"empty"}</code>
+</td>
+<td>
+A custom display name for the condition.</td>
+</tr>
+<tr>
+<td>
+invert</td>
+<td>
+Boolean</td>
+<td>
+<code>
+false</code>
+</td>
+<td>
+Lets you invert the condition</td>
+</tr>
+<tr>
+<td>
+enabling</td>
+<td>
+Boolean</td>
+<td>
+<code>
+false</code>
+</td>
+<td>
+If this condition enables. If false it instead decides whether the ability is unlocked.</td>
+</tr>
+<tr>
+<td>
+needs_key</td>
+<td>
+Boolean</td>
+<td>
+<code>
+false</code>
+</td>
+<td>
+If this condition requires a key</td>
+</tr>
+<tr>
+<td>
+experience</td>
+<td>
+ExperienceThreeData$Experience</td>
+<td>
+<code>
+5</code>
+</td>
+<td>
+Determines the amount of XP the player has to spend to activate this condition.</td>
+</tr>
+</tbody>
+</table>
+<h3>
+Example:</h3>
+<pre class="json-block" id="threecore:xp_buy_example">
+</pre>
+<script>
+var json = JSON.parse('[{"type":"threecore:xp_buy",  "custom_title": {"text":"empty"},  "invert": false,  "enabling": false,  "needs_key": false,  "experience": 5}]'); document.getElementById('threecore:xp_buy_example').innerHTML = JSON.stringify(json, undefined, 2);</script>
+</div>
+<hr>
+
+<div id="threecore:item_buy">
+<h2>
+An item must be spent<code>
+threecore:item_buy</code>
+</h2>
+<h3>
+Data Settings:</h3>
+<table>
+<thead>
+<tr>
+<th>
+Setting</th>
+<th>
+Type</th>
+<th>
+Fallback Value</th>
+<th>
+Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+custom_title</td>
+<td>
+ITextComponent</td>
+<td>
+<code>
+{"text":"empty"}</code>
+</td>
+<td>
+A custom display name for the condition.</td>
+</tr>
+<tr>
+<td>
+invert</td>
+<td>
+Boolean</td>
+<td>
+<code>
+false</code>
+</td>
+<td>
+Lets you invert the condition</td>
+</tr>
+<tr>
+<td>
+enabling</td>
+<td>
+Boolean</td>
+<td>
+<code>
+false</code>
+</td>
+<td>
+If this condition enables. If false it instead decides whether the ability is unlocked.</td>
+</tr>
+<tr>
+<td>
+needs_key</td>
+<td>
+Boolean</td>
+<td>
+<code>
+false</code>
+</td>
+<td>
+If this condition requires a key</td>
+</tr>
+<tr>
+<td>
+item</td>
+<td>
+ItemStack</td>
+<td>
+<code>
+{"item":"minecraft:apple","count":1}</code>
+</td>
+<td>
+Determines the item the player must spend to activate this condition.</td>
+</tr>
+</tbody>
+</table>
+<h3>
+Example:</h3>
+<pre class="json-block" id="threecore:item_buy_example">
+</pre>
+<script>
+var json = JSON.parse('[{"type":"threecore:item_buy",  "custom_title": {"text":"empty"},  "invert": false,  "enabling": false,  "needs_key": false,  "item": {"item":"minecraft:apple","count":1}}]'); document.getElementById('threecore:item_buy_example').innerHTML = JSON.stringify(json, undefined, 2);</script>
+</div>
+<hr>
+
+<div id="threecore:equipment_slot">
+<h2>
+Item needs to be in the main hand slot<code>
+threecore:equipment_slot</code>
+</h2>
+<h3>
+Data Settings:</h3>
+<table>
+<thead>
+<tr>
+<th>
+Setting</th>
+<th>
+Type</th>
+<th>
+Fallback Value</th>
+<th>
+Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+custom_title</td>
+<td>
+ITextComponent</td>
+<td>
+<code>
+{"text":"empty"}</code>
+</td>
+<td>
+A custom display name for the condition.</td>
+</tr>
+<tr>
+<td>
+invert</td>
+<td>
+Boolean</td>
+<td>
+<code>
+false</code>
+</td>
+<td>
+Lets you invert the condition</td>
+</tr>
+<tr>
+<td>
+enabling</td>
+<td>
+Boolean</td>
+<td>
+<code>
+false</code>
+</td>
+<td>
+If this condition enables. If false it instead decides whether the ability is unlocked.</td>
+</tr>
+<tr>
+<td>
+needs_key</td>
+<td>
+Boolean</td>
+<td>
+<code>
+false</code>
+</td>
+<td>
+If this condition requires a key</td>
+</tr>
+<tr>
+<td>
+slot</td>
+<td>
+EquipmentSlotType</td>
+<td>
+<code>
+"mainhand"</code>
+</td>
+<td>
+Requires the ability to be in an item, and needs that item in the specified slot</td>
+</tr>
+</tbody>
+</table>
+<h3>
+Example:</h3>
+<pre class="json-block" id="threecore:equipment_slot_example">
+</pre>
+<script>
+var json = JSON.parse('[{"type":"threecore:equipment_slot",  "custom_title": {"text":"empty"},  "invert": false,  "enabling": false,  "needs_key": false,  "slot": "mainhand"}]'); document.getElementById('threecore:equipment_slot_example').innerHTML = JSON.stringify(json, undefined, 2);</script>
+</div>
+<hr>
+
+<div id="threecore:xp">
+<h2>
+Karma must be at least 0<code>
+threecore:xp</code>
+</h2>
+<h3>
+Data Settings:</h3>
+<table>
+<thead>
+<tr>
+<th>
+Setting</th>
+<th>
+Type</th>
+<th>
+Fallback Value</th>
+<th>
+Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+custom_title</td>
+<td>
+ITextComponent</td>
+<td>
+<code>
+{"text":"empty"}</code>
+</td>
+<td>
+A custom display name for the condition.</td>
+</tr>
+<tr>
+<td>
+invert</td>
+<td>
+Boolean</td>
+<td>
+<code>
+false</code>
+</td>
+<td>
+Lets you invert the condition</td>
+</tr>
+<tr>
+<td>
+enabling</td>
+<td>
+Boolean</td>
+<td>
+<code>
+false</code>
+</td>
+<td>
+If this condition enables. If false it instead decides whether the ability is unlocked.</td>
+</tr>
+<tr>
+<td>
+needs_key</td>
+<td>
+Boolean</td>
+<td>
+<code>
+false</code>
+</td>
+<td>
+If this condition requires a key</td>
+</tr>
+<tr>
+<td>
+min</td>
+<td>
+Integer</td>
+<td>
+<code>
+0</code>
+</td>
+<td>
+The minimum xp level required for the condition to be true.</td>
+</tr>
+<tr>
+<td>
+max</td>
+<td>
+Integer</td>
+<td>
+<code>
+2147483647</code>
+</td>
+<td>
+The maximum xp level required for the condition to be true.</td>
+</tr>
+</tbody>
+</table>
+<h3>
+Example:</h3>
+<pre class="json-block" id="threecore:xp_example">
+</pre>
+<script>
+var json = JSON.parse('[{"type":"threecore:xp",  "custom_title": {"text":"empty"},  "invert": false,  "enabling": false,  "needs_key": false,  "min": 0,  "max": 2147483647}]'); document.getElementById('threecore:xp_example').innerHTML = JSON.stringify(json, undefined, 2);</script>
+</div>
+<hr>
+
+<div id="threecore:wearing_item">
+<h2>
+Entity must wear specific items<code>
+threecore:wearing_item</code>
+</h2>
+<h3>
+Data Settings:</h3>
+<table>
+<thead>
+<tr>
+<th>
+Setting</th>
+<th>
+Type</th>
+<th>
+Fallback Value</th>
+<th>
+Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+custom_title</td>
+<td>
+ITextComponent</td>
+<td>
+<code>
+{"text":"empty"}</code>
+</td>
+<td>
+A custom display name for the condition.</td>
+</tr>
+<tr>
+<td>
+invert</td>
+<td>
+Boolean</td>
+<td>
+<code>
+false</code>
+</td>
+<td>
+Lets you invert the condition</td>
+</tr>
+<tr>
+<td>
+enabling</td>
+<td>
+Boolean</td>
+<td>
+<code>
+false</code>
+</td>
+<td>
+If this condition enables. If false it instead decides whether the ability is unlocked.</td>
+</tr>
+<tr>
+<td>
+needs_key</td>
+<td>
+Boolean</td>
+<td>
+<code>
+false</code>
+</td>
+<td>
+If this condition requires a key</td>
+</tr>
+<tr>
+<td>
+mainhand</td>
+<td>
+Ingredient</td>
+<td>
+<code>
+[]</code>
+</td>
+<td>
+Specifies the ingredient for the item in the mainhand slot</td>
+</tr>
+<tr>
+<td>
+offhand</td>
+<td>
+Ingredient</td>
+<td>
+<code>
+[]</code>
+</td>
+<td>
+Specifies the ingredient for the item in the offhand slot</td>
+</tr>
+<tr>
+<td>
+feet</td>
+<td>
+Ingredient</td>
+<td>
+<code>
+[]</code>
+</td>
+<td>
+Specifies the ingredient for the item in the feet slot</td>
+</tr>
+<tr>
+<td>
+legs</td>
+<td>
+Ingredient</td>
+<td>
+<code>
+[]</code>
+</td>
+<td>
+Specifies the ingredient for the item in the legs slot</td>
+</tr>
+<tr>
+<td>
+chest</td>
+<td>
+Ingredient</td>
+<td>
+<code>
+[]</code>
+</td>
+<td>
+Specifies the ingredient for the item in the chest slot</td>
+</tr>
+<tr>
+<td>
+head</td>
+<td>
+Ingredient</td>
+<td>
+<code>
+[]</code>
+</td>
+<td>
+Specifies the ingredient for the item in the head slot</td>
+</tr>
+</tbody>
+</table>
+<h3>
+Example:</h3>
+<pre class="json-block" id="threecore:wearing_item_example">
+</pre>
+<script>
+var json = JSON.parse('[{"type":"threecore:wearing_item",  "custom_title": {"text":"empty"},  "invert": false,  "enabling": false,  "needs_key": false,  "mainhand": [],  "offhand": [],  "feet": [],  "legs": [],  "chest": [],  "head": []}]'); document.getElementById('threecore:wearing_item_example').innerHTML = JSON.stringify(json, undefined, 2);</script>
+</div>
+<hr>
+
+<div id="threecore:wearing_item_tag">
+<h2>
+Entity must wear items within the forge:ingots/iron tag<code>
+threecore:wearing_item_tag</code>
+</h2>
+<h3>
+Data Settings:</h3>
+<table>
+<thead>
+<tr>
+<th>
+Setting</th>
+<th>
+Type</th>
+<th>
+Fallback Value</th>
+<th>
+Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+custom_title</td>
+<td>
+ITextComponent</td>
+<td>
+<code>
+{"text":"empty"}</code>
+</td>
+<td>
+A custom display name for the condition.</td>
+</tr>
+<tr>
+<td>
+invert</td>
+<td>
+Boolean</td>
+<td>
+<code>
+false</code>
+</td>
+<td>
+Lets you invert the condition</td>
+</tr>
+<tr>
+<td>
+enabling</td>
+<td>
+Boolean</td>
+<td>
+<code>
+false</code>
+</td>
+<td>
+If this condition enables. If false it instead decides whether the ability is unlocked.</td>
+</tr>
+<tr>
+<td>
+needs_key</td>
+<td>
+Boolean</td>
+<td>
+<code>
+false</code>
+</td>
+<td>
+If this condition requires a key</td>
+</tr>
+<tr>
+<td>
+item_tag</td>
+<td>
+Item></td>
+<td>
+<code>
+"forge:ingots/iron"</code>
+</td>
+<td>
+Determines the item tag the items must have</td>
+</tr>
+<tr>
+<td>
+mainhand</td>
+<td>
+Boolean</td>
+<td>
+<code>
+false</code>
+</td>
+<td>
+Determines if the item in the mainhand slot must have the specified tag</td>
+</tr>
+<tr>
+<td>
+offhand</td>
+<td>
+Boolean</td>
+<td>
+<code>
+false</code>
+</td>
+<td>
+Determines if the item in the offhand slot must have the specified tag</td>
+</tr>
+<tr>
+<td>
+feet</td>
+<td>
+Boolean</td>
+<td>
+<code>
+true</code>
+</td>
+<td>
+Determines if the item in the feet slot must have the specified tag</td>
+</tr>
+<tr>
+<td>
+legs</td>
+<td>
+Boolean</td>
+<td>
+<code>
+true</code>
+</td>
+<td>
+Determines if the item in the legs slot must have the specified tag</td>
+</tr>
+<tr>
+<td>
+chest</td>
+<td>
+Boolean</td>
+<td>
+<code>
+true</code>
+</td>
+<td>
+Determines if the item in the chest slot must have the specified tag</td>
+</tr>
+<tr>
+<td>
+head</td>
+<td>
+Boolean</td>
+<td>
+<code>
+true</code>
+</td>
+<td>
+Determines if the item in the head slot must have the specified tag</td>
+</tr>
+</tbody>
+</table>
+<h3>
+Example:</h3>
+<pre class="json-block" id="threecore:wearing_item_tag_example">
+</pre>
+<script>
+var json = JSON.parse('[{"type":"threecore:wearing_item_tag",  "custom_title": {"text":"empty"},  "invert": false,  "enabling": false,  "needs_key": false,  "item_tag": "forge:ingots/iron",  "mainhand": false,  "offhand": false,  "feet": true,  "legs": true,  "chest": true,  "head": true}]'); document.getElementById('threecore:wearing_item_tag_example').innerHTML = JSON.stringify(json, undefined, 2);</script>
+</div>
+<hr>
+
+<div id="threecore:item_integer_nbt">
+<h2>
+Item in HEAD slot must have specific value in Opening nbt tag<code>
+threecore:item_integer_nbt</code>
+</h2>
+<h3>
+Data Settings:</h3>
+<table>
+<thead>
+<tr>
+<th>
+Setting</th>
+<th>
+Type</th>
+<th>
+Fallback Value</th>
+<th>
+Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+custom_title</td>
+<td>
+ITextComponent</td>
+<td>
+<code>
+{"text":"empty"}</code>
+</td>
+<td>
+A custom display name for the condition.</td>
+</tr>
+<tr>
+<td>
+invert</td>
+<td>
+Boolean</td>
+<td>
+<code>
+false</code>
+</td>
+<td>
+Lets you invert the condition</td>
+</tr>
+<tr>
+<td>
+enabling</td>
+<td>
+Boolean</td>
+<td>
+<code>
+false</code>
+</td>
+<td>
+If this condition enables. If false it instead decides whether the ability is unlocked.</td>
+</tr>
+<tr>
+<td>
+needs_key</td>
+<td>
+Boolean</td>
+<td>
+<code>
+false</code>
+</td>
+<td>
+If this condition requires a key</td>
+</tr>
+<tr>
+<td>
+slot</td>
+<td>
+EquipmentSlotType</td>
+<td>
+<code>
+"head"</code>
+</td>
+<td>
+The slot which will be checked on</td>
+</tr>
+<tr>
+<td>
+nbt_tag</td>
+<td>
+String</td>
+<td>
+<code>
+"Opening"</code>
+</td>
+<td>
+The nbt tag which will be checked on</td>
+</tr>
+<tr>
+<td>
+min</td>
+<td>
+Integer</td>
+<td>
+<code>
+0</code>
+</td>
+<td>
+The minimum value the nbt tag has to be</td>
+</tr>
+<tr>
+<td>
+max</td>
+<td>
+Integer</td>
+<td>
+<code>
+0</code>
+</td>
+<td>
+The maximum value the nbt tag has to be</td>
+</tr>
+</tbody>
+</table>
+<h3>
+Example:</h3>
+<pre class="json-block" id="threecore:item_integer_nbt_example">
+</pre>
+<script>
+var json = JSON.parse('[{"type":"threecore:item_integer_nbt",  "custom_title": {"text":"empty"},  "invert": false,  "enabling": false,  "needs_key": false,  "slot": "head",  "nbt_tag": "Opening",  "min": 0,  "max": 0}]'); document.getElementById('threecore:item_integer_nbt_example').innerHTML = JSON.stringify(json, undefined, 2);</script>
+</div>
+<hr>
+
+<div id="threecore:eyes_in_fluid">
+<h2>
+Eyes are need to be covered by fluids in the NamedTag[minecraft:water] tag<code>
+threecore:eyes_in_fluid</code>
+</h2>
+<h3>
+Data Settings:</h3>
+<table>
+<thead>
+<tr>
+<th>
+Setting</th>
+<th>
+Type</th>
+<th>
+Fallback Value</th>
+<th>
+Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+custom_title</td>
+<td>
+ITextComponent</td>
+<td>
+<code>
+{"text":"empty"}</code>
+</td>
+<td>
+A custom display name for the condition.</td>
+</tr>
+<tr>
+<td>
+invert</td>
+<td>
+Boolean</td>
+<td>
+<code>
+false</code>
+</td>
+<td>
+Lets you invert the condition</td>
+</tr>
+<tr>
+<td>
+enabling</td>
+<td>
+Boolean</td>
+<td>
+<code>
+false</code>
+</td>
+<td>
+If this condition enables. If false it instead decides whether the ability is unlocked.</td>
+</tr>
+<tr>
+<td>
+needs_key</td>
+<td>
+Boolean</td>
+<td>
+<code>
+false</code>
+</td>
+<td>
+If this condition requires a key</td>
+</tr>
+<tr>
+<td>
+fluid_tag</td>
+<td>
+Fluid></td>
+<td>
+<code>
+"minecraft:water"</code>
+</td>
+<td>
+Determines the fluid the eyes are needed to be in</td>
+</tr>
+</tbody>
+</table>
+<h3>
+Example:</h3>
+<pre class="json-block" id="threecore:eyes_in_fluid_example">
+</pre>
+<script>
+var json = JSON.parse('[{"type":"threecore:eyes_in_fluid",  "custom_title": {"text":"empty"},  "invert": false,  "enabling": false,  "needs_key": false,  "fluid_tag": "minecraft:water"}]'); document.getElementById('threecore:eyes_in_fluid_example').innerHTML = JSON.stringify(json, undefined, 2);</script>
+</div>
+<hr>
+
+<div id="threecore:size">
+<h2>
+Size must be between 0.0 and 16.0<code>
+threecore:size</code>
+</h2>
+<h3>
+Data Settings:</h3>
+<table>
+<thead>
+<tr>
+<th>
+Setting</th>
+<th>
+Type</th>
+<th>
+Fallback Value</th>
+<th>
+Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+custom_title</td>
+<td>
+ITextComponent</td>
+<td>
+<code>
+{"text":"empty"}</code>
+</td>
+<td>
+A custom display name for the condition.</td>
+</tr>
+<tr>
+<td>
+invert</td>
+<td>
+Boolean</td>
+<td>
+<code>
+false</code>
+</td>
+<td>
+Lets you invert the condition</td>
+</tr>
+<tr>
+<td>
+enabling</td>
+<td>
+Boolean</td>
+<td>
+<code>
+false</code>
+</td>
+<td>
+If this condition enables. If false it instead decides whether the ability is unlocked.</td>
+</tr>
+<tr>
+<td>
+needs_key</td>
+<td>
+Boolean</td>
+<td>
+<code>
+false</code>
+</td>
+<td>
+If this condition requires a key</td>
+</tr>
+<tr>
+<td>
+min</td>
+<td>
+Float</td>
+<td>
+<code>
+0.0</code>
+</td>
+<td>
+The minimum size required for the condition to be true.</td>
+</tr>
+<tr>
+<td>
+max</td>
+<td>
+Float</td>
+<td>
+<code>
+16.0</code>
+</td>
+<td>
+The maximum size required for the condition to be true.</td>
+</tr>
+</tbody>
+</table>
+<h3>
+Example:</h3>
+<pre class="json-block" id="threecore:size_example">
+</pre>
+<script>
+var json = JSON.parse('[{"type":"threecore:size",  "custom_title": {"text":"empty"},  "invert": false,  "enabling": false,  "needs_key": false,  "min": 0.0,  "max": 16.0}]'); document.getElementById('threecore:size_example').innerHTML = JSON.stringify(json, undefined, 2);</script>
+</div>
+<hr>
+
+<div id="threecore:abilities_locked">
+<h2>
+ abilities must be locked<code>
+threecore:abilities_locked</code>
+</h2>
+<h3>
+Data Settings:</h3>
+<table>
+<thead>
+<tr>
+<th>
+Setting</th>
+<th>
+Type</th>
+<th>
+Fallback Value</th>
+<th>
+Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+custom_title</td>
+<td>
+ITextComponent</td>
+<td>
+<code>
+{"text":"empty"}</code>
+</td>
+<td>
+A custom display name for the condition.</td>
+</tr>
+<tr>
+<td>
+invert</td>
+<td>
+Boolean</td>
+<td>
+<code>
+false</code>
+</td>
+<td>
+Lets you invert the condition</td>
+</tr>
+<tr>
+<td>
+enabling</td>
+<td>
+Boolean</td>
+<td>
+<code>
+false</code>
+</td>
+<td>
+If this condition enables. If false it instead decides whether the ability is unlocked.</td>
+</tr>
+<tr>
+<td>
+needs_key</td>
+<td>
+Boolean</td>
+<td>
+<code>
+false</code>
+</td>
+<td>
+If this condition requires a key</td>
+</tr>
+<tr>
+<td>
+ability_ids</td>
+<td>
+String[]</td>
+<td>
+<code>
+["ability_1","ability_2"]</code>
+</td>
+<td>
+Contains the ids of abilities which MUST be LOCKED</td>
+</tr>
+</tbody>
+</table>
+<h3>
+Example:</h3>
+<pre class="json-block" id="threecore:abilities_locked_example">
+</pre>
+<script>
+var json = JSON.parse('[{"type":"threecore:abilities_locked",  "custom_title": {"text":"empty"},  "invert": false,  "enabling": false,  "needs_key": false,  "ability_ids": ["ability_1","ability_2"]}]'); document.getElementById('threecore:abilities_locked_example').innerHTML = JSON.stringify(json, undefined, 2);</script>
+</div>
+<hr>
+
+<div id="threecore:living_values">
+<h2>
+Entity HEALTH must be GREATER than 0.0<code>
+threecore:living_values</code>
+</h2>
+<h3>
+Data Settings:</h3>
+<table>
+<thead>
+<tr>
+<th>
+Setting</th>
+<th>
+Type</th>
+<th>
+Fallback Value</th>
+<th>
+Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+custom_title</td>
+<td>
+ITextComponent</td>
+<td>
+<code>
+{"text":"empty"}</code>
+</td>
+<td>
+A custom display name for the condition.</td>
+</tr>
+<tr>
+<td>
+invert</td>
+<td>
+Boolean</td>
+<td>
+<code>
+false</code>
+</td>
+<td>
+Lets you invert the condition</td>
+</tr>
+<tr>
+<td>
+enabling</td>
+<td>
+Boolean</td>
+<td>
+<code>
+false</code>
+</td>
+<td>
+If this condition enables. If false it instead decides whether the ability is unlocked.</td>
+</tr>
+<tr>
+<td>
+needs_key</td>
+<td>
+Boolean</td>
+<td>
+<code>
+false</code>
+</td>
+<td>
+If this condition requires a key</td>
+</tr>
+<tr>
+<td>
+value_type</td>
+<td>
+String</td>
+<td>
+<code>
+"HEALTH"</code>
+</td>
+<td>
+The type of value to test, HEALTH, HUNGER, SATURATION, OXYGEN, ARMOR, TOUGHNESS, EXPERIENCE_BAR, or EXPERIENCE_POINT</td>
+</tr>
+<tr>
+<td>
+test_type</td>
+<td>
+String</td>
+<td>
+<code>
+"GREATER"</code>
+</td>
+<td>
+The type of test for the value, GREATER, LESS, EQUAL, PERCENT_GREATER, PERCENT_LESS, PERCENT_EQUAL</td>
+</tr>
+<tr>
+<td>
+test_value</td>
+<td>
+Float</td>
+<td>
+<code>
+0.0</code>
+</td>
+<td>
+The value to test the entity's value against</td>
+</tr>
+</tbody>
+</table>
+<h3>
+Example:</h3>
+<pre class="json-block" id="threecore:living_values_example">
+</pre>
+<script>
+var json = JSON.parse('[{"type":"threecore:living_values",  "custom_title": {"text":"empty"},  "invert": false,  "enabling": false,  "needs_key": false,  "value_type": "HEALTH",  "test_type": "GREATER",  "test_value": 0.0}]'); document.getElementById('threecore:living_values_example').innerHTML = JSON.stringify(json, undefined, 2);</script>
+</div>
+<hr>
+
+<div id="threecore:has_potions">
+<h2>
+Entity must have  potion effects<code>
+threecore:has_potions</code>
+</h2>
+<h3>
+Data Settings:</h3>
+<table>
+<thead>
+<tr>
+<th>
+Setting</th>
+<th>
+Type</th>
+<th>
+Fallback Value</th>
+<th>
+Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+custom_title</td>
+<td>
+ITextComponent</td>
+<td>
+<code>
+{"text":"empty"}</code>
+</td>
+<td>
+A custom display name for the condition.</td>
+</tr>
+<tr>
+<td>
+invert</td>
+<td>
+Boolean</td>
+<td>
+<code>
+false</code>
+</td>
+<td>
+Lets you invert the condition</td>
+</tr>
+<tr>
+<td>
+enabling</td>
+<td>
+Boolean</td>
+<td>
+<code>
+false</code>
+</td>
+<td>
+If this condition enables. If false it instead decides whether the ability is unlocked.</td>
+</tr>
+<tr>
+<td>
+needs_key</td>
+<td>
+Boolean</td>
+<td>
+<code>
+false</code>
+</td>
+<td>
+If this condition requires a key</td>
+</tr>
+<tr>
+<td>
+potions</td>
+<td>
+String[]</td>
+<td>
+<code>
+[]</code>
+</td>
+<td>
+The potion effects to test for. If empty, tests if there are any potion effects</td>
+</tr>
+</tbody>
+</table>
+<h3>
+Example:</h3>
+<pre class="json-block" id="threecore:has_potions_example">
+</pre>
+<script>
+var json = JSON.parse('[{"type":"threecore:has_potions",  "custom_title": {"text":"empty"},  "invert": false,  "enabling": false,  "needs_key": false,  "potions": []}]'); document.getElementById('threecore:has_potions_example').innerHTML = JSON.stringify(json, undefined, 2);</script>
+</div>
+<hr>
+
+<div id="threecore:three_data">
+<h2>
+ThreeData value must be compared<code>
+threecore:three_data</code>
+</h2>
+<h3>
+Data Settings:</h3>
+<table>
+<thead>
+<tr>
+<th>
+Setting</th>
+<th>
+Type</th>
+<th>
+Fallback Value</th>
+<th>
+Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+custom_title</td>
+<td>
+ITextComponent</td>
+<td>
+<code>
+{"text":"empty"}</code>
+</td>
+<td>
+A custom display name for the condition.</td>
+</tr>
+<tr>
+<td>
+invert</td>
+<td>
+Boolean</td>
+<td>
+<code>
+false</code>
+</td>
+<td>
+Lets you invert the condition</td>
+</tr>
+<tr>
+<td>
+enabling</td>
+<td>
+Boolean</td>
+<td>
+<code>
+false</code>
+</td>
+<td>
+If this condition enables. If false it instead decides whether the ability is unlocked.</td>
+</tr>
+<tr>
+<td>
+needs_key</td>
+<td>
+Boolean</td>
+<td>
+<code>
+false</code>
+</td>
+<td>
+If this condition requires a key</td>
+</tr>
+<tr>
+<td>
+test_ability</td>
+<td>
+String</td>
+<td>
+<code>
+""</code>
+</td>
+<td>
+The ability to test the threedata from</td>
+</tr>
+<tr>
+<td>
+data_name</td>
+<td>
+String</td>
+<td>
+<code>
+""</code>
+</td>
+<td>
+The name of the data to test</td>
+</tr>
+<tr>
+<td>
+add_amount</td>
+<td>
+Float</td>
+<td>
+<code>
+0.0</code>
+</td>
+<td>
+The amount of data to add after checking</td>
+</tr>
+<tr>
+<td>
+test_value</td>
+<td>
+String</td>
+<td>
+<code>
+""</code>
+</td>
+<td>
+The value to test the threedata's value against, as a string. Supports string, boolean, float and integer</td>
+</tr>
+<tr>
+<td>
+test_type</td>
+<td>
+String</td>
+<td>
+<code>
+"GREATER"</code>
+</td>
+<td>
+The type of test for the value, GREATER, LESS, or EQUAL</td>
+</tr>
+<tr>
+<td>
+amount_max</td>
+<td>
+Float</td>
+<td>
+<code>
+3.4028235E38</code>
+</td>
+<td>
+The maximum amount the data can be after adding add_amount</td>
+</tr>
+<tr>
+<td>
+amount_min</td>
+<td>
+Float</td>
+<td>
+<code>
+0.0</code>
+</td>
+<td>
+The minimum amount the data can be after adding add_amount</td>
+</tr>
+</tbody>
+</table>
+<h3>
+Example:</h3>
+<pre class="json-block" id="threecore:three_data_example">
+</pre>
+<script>
+var json = JSON.parse('[{"type":"threecore:three_data",  "custom_title": {"text":"empty"},  "invert": false,  "enabling": false,  "needs_key": false,  "test_ability": "",  "data_name": "",  "add_amount": 0.0,  "test_value": "",  "test_type": "GREATER",  "amount_max": 3.4028235E38,  "amount_min": 0.0}]'); document.getElementById('threecore:three_data_example').innerHTML = JSON.stringify(json, undefined, 2);</script>
+</div>
+<hr>
+
+<div id="threecore:exclusive">
+<h2>
+Ability must be the only of its kind<code>
+threecore:exclusive</code>
+</h2>
+<h3>
+Data Settings:</h3>
+<table>
+<thead>
+<tr>
+<th>
+Setting</th>
+<th>
+Type</th>
+<th>
+Fallback Value</th>
+<th>
+Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+custom_title</td>
+<td>
+ITextComponent</td>
+<td>
+<code>
+{"text":"empty"}</code>
+</td>
+<td>
+A custom display name for the condition.</td>
+</tr>
+<tr>
+<td>
+invert</td>
+<td>
+Boolean</td>
+<td>
+<code>
+false</code>
+</td>
+<td>
+Lets you invert the condition</td>
+</tr>
+<tr>
+<td>
+enabling</td>
+<td>
+Boolean</td>
+<td>
+<code>
+false</code>
+</td>
+<td>
+If this condition enables. If false it instead decides whether the ability is unlocked.</td>
+</tr>
+<tr>
+<td>
+needs_key</td>
+<td>
+Boolean</td>
+<td>
+<code>
+false</code>
+</td>
+<td>
+If this condition requires a key</td>
+</tr>
+</tbody>
+</table>
+<h3>
+Example:</h3>
+<pre class="json-block" id="threecore:exclusive_example">
+</pre>
+<script>
+var json = JSON.parse('[{"type":"threecore:exclusive",  "custom_title": {"text":"empty"},  "invert": false,  "enabling": false,  "needs_key": false}]'); document.getElementById('threecore:exclusive_example').innerHTML = JSON.stringify(json, undefined, 2);</script>
+</div>
+<hr>
+
+<div id="threecore:combo">
+<h2>
+Specific abilities must be used in specific order<code>
+threecore:combo</code>
+</h2>
+<h3>
+Data Settings:</h3>
+<table>
+<thead>
+<tr>
+<th>
+Setting</th>
+<th>
+Type</th>
+<th>
+Fallback Value</th>
+<th>
+Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+custom_title</td>
+<td>
+ITextComponent</td>
+<td>
+<code>
+{"text":"empty"}</code>
+</td>
+<td>
+A custom display name for the condition.</td>
+</tr>
+<tr>
+<td>
+invert</td>
+<td>
+Boolean</td>
+<td>
+<code>
+false</code>
+</td>
+<td>
+Lets you invert the condition</td>
+</tr>
+<tr>
+<td>
+enabling</td>
+<td>
+Boolean</td>
+<td>
+<code>
+false</code>
+</td>
+<td>
+If this condition enables. If false it instead decides whether the ability is unlocked.</td>
+</tr>
+<tr>
+<td>
+needs_key</td>
+<td>
+Boolean</td>
+<td>
+<code>
+false</code>
+</td>
+<td>
+If this condition requires a key</td>
+</tr>
+<tr>
+<td>
+abilities</td>
+<td>
+String[]</td>
+<td>
+<code>
+[]</code>
+</td>
+<td>
+The abilities required to use in order to unlock the ability</td>
+</tr>
+</tbody>
+</table>
+<h3>
+Example:</h3>
+<pre class="json-block" id="threecore:combo_example">
+</pre>
+<script>
+var json = JSON.parse('[{"type":"threecore:combo",  "custom_title": {"text":"empty"},  "invert": false,  "enabling": false,  "needs_key": false,  "abilities": []}]'); document.getElementById('threecore:combo_example').innerHTML = JSON.stringify(json, undefined, 2);</script>
+</div>
+<hr>
+
+<div id="threecore:curios_slot">
+<h2>
+Item needs to be in specific Curios slot<code>
+threecore:curios_slot</code>
+</h2>
+<h3>
+Data Settings:</h3>
+<table>
+<thead>
+<tr>
+<th>
+Setting</th>
+<th>
+Type</th>
+<th>
+Fallback Value</th>
+<th>
+Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+custom_title</td>
+<td>
+ITextComponent</td>
+<td>
+<code>
+{"text":"empty"}</code>
+</td>
+<td>
+A custom display name for the condition.</td>
+</tr>
+<tr>
+<td>
+invert</td>
+<td>
+Boolean</td>
+<td>
+<code>
+false</code>
+</td>
+<td>
+Lets you invert the condition</td>
+</tr>
+<tr>
+<td>
+enabling</td>
+<td>
+Boolean</td>
+<td>
+<code>
+false</code>
+</td>
+<td>
+If this condition enables. If false it instead decides whether the ability is unlocked.</td>
+</tr>
+<tr>
+<td>
+needs_key</td>
+<td>
+Boolean</td>
+<td>
+<code>
+false</code>
+</td>
+<td>
+If this condition requires a key</td>
+</tr>
+<tr>
+<td>
+slots</td>
+<td>
+String[]</td>
+<td>
+<code>
+"back"</code>
+</td>
+<td>
+Requires the ability to be in an item, and needs that item to be in one of those specified slots. Leave empty for all kind of slots -> https://github.com/TheIllusiveC4/Curios/wiki/Frequently-Used-Slots</td>
+</tr>
+</tbody>
+</table>
+<h3>
+Example:</h3>
+<pre class="json-block" id="threecore:curios_slot_example">
+</pre>
+<script>
+var json = JSON.parse('[{"type":"threecore:curios_slot",  "custom_title": {"text":"empty"},  "invert": false,  "enabling": false,  "needs_key": false,  "slots": "back"}]'); document.getElementById('threecore:curios_slot_example').innerHTML = JSON.stringify(json, undefined, 2);</script>
+</div>
+<hr>
+
+<div id="threecore:wearing_curios">
+<h2>
+Specific item must be in specific Curios slot<code>
+threecore:wearing_curios</code>
+</h2>
+<h3>
+Data Settings:</h3>
+<table>
+<thead>
+<tr>
+<th>
+Setting</th>
+<th>
+Type</th>
+<th>
+Fallback Value</th>
+<th>
+Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+custom_title</td>
+<td>
+ITextComponent</td>
+<td>
+<code>
+{"text":"empty"}</code>
+</td>
+<td>
+A custom display name for the condition.</td>
+</tr>
+<tr>
+<td>
+invert</td>
+<td>
+Boolean</td>
+<td>
+<code>
+false</code>
+</td>
+<td>
+Lets you invert the condition</td>
+</tr>
+<tr>
+<td>
+enabling</td>
+<td>
+Boolean</td>
+<td>
+<code>
+false</code>
+</td>
+<td>
+If this condition enables. If false it instead decides whether the ability is unlocked.</td>
+</tr>
+<tr>
+<td>
+needs_key</td>
+<td>
+Boolean</td>
+<td>
+<code>
+false</code>
+</td>
+<td>
+If this condition requires a key</td>
+</tr>
+<tr>
+<td>
+item</td>
+<td>
+Ingredient</td>
+<td>
+<code>
+{"item":"minecraft:apple"}</code>
+</td>
+<td>
+Ingredient for testing the item in the curios slot</td>
+</tr>
+<tr>
+<td>
+slots</td>
+<td>
+String[]</td>
+<td>
+<code>
+["back","belt"]</code>
+</td>
+<td>
+Slots the item can be in. Leave empty for all kind of slots -> https://github.com/TheIllusiveC4/Curios/wiki/Frequently-Used-Slots</td>
+</tr>
+</tbody>
+</table>
+<h3>
+Example:</h3>
+<pre class="json-block" id="threecore:wearing_curios_example">
+</pre>
+<script>
+var json = JSON.parse('[{"type":"threecore:wearing_curios",  "custom_title": {"text":"empty"},  "invert": false,  "enabling": false,  "needs_key": false,  "item": {"item":"minecraft:apple"},  "slots": ["back","belt"]}]'); document.getElementById('threecore:wearing_curios_example').innerHTML = JSON.stringify(json, undefined, 2);</script>
+</div>
+</body>
+</html>
