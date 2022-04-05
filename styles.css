@@ -1,0 +1,29 @@
+.p_s {
+    background-color: Green;
+    padding: 6px 25px;
+    margin-top: 4px;
+    border-radius: 5px;
+    word-spacing: 2px;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    font-family: verdana;
+}
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+.runbtn {
+    background-color: yellow;
+    color: black;
+    text-align: center;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 18px;
+    vertical-align: middle;
+    text-align: center;
+    padding: 6px 25px;
+    margin-top: 4px;
+    border-radius: 5px;
+    word-spacing: 2px;
+}
