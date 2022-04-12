@@ -3,11 +3,11 @@ function myFunction() {
 }
 function submitFunction() {
     var checkBox = document.getElementById("Checkbox-submit");
-    var text = document.getElementById("Submit-button");
+    var Submit-button = document.getElementById("Submit-button");
     if (checkBox.checked == true){
-        text.style.display = "block";
+        Submit-button.style.display = "block";
     } else {
-        text.style.display = "none";
+        Submit-button.style.display = "none";
     }
 }
 myFunction()
