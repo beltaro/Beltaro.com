@@ -1,4 +1,4 @@
 function myFunction() {
-    window.alert("Lets Gooooooo !")
+    window.alert("Welcome ! This Is A js Test !")
 }
 myFunction()
