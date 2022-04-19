@@ -1,4 +1,4 @@
-function alert() {
+function alertfunc() {
     alert("Hello ! This Is A Js Test !");
 }
-alert()
+alertfunc();
