@@ -1,0 +1,28 @@
+.headerClass {
+  font-size: 200%;
+  font-family: Helvetica, sans-serif;
+  text-align: center;
+  color: #F7F7FF;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.paragraphClass {
+  border-color: #50a2cee1;
+  color: #F7F7FF;
+  text-align: center;
+  border: solid;
+  border-radius: 16px;
+  width: 900px;
+  margin: auto;
+  border-color: #DAE6F5;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body {
+  background-color: #8AA4C2;
+}
+/*# sourceMappingURL=sassStyles.css.map */
