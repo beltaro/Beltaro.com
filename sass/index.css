@@ -51,6 +51,19 @@ body p {
   margin: auto;
 }
 
+.center {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
 body {
   background-color: #8AA4C2;
 }
