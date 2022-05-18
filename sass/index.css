@@ -55,4 +55,8 @@ body p {
 
 body {
   background-color: #8AA4C2;
+}
+.loginPage a {
+  font-size: 100%;
+  font-family: Helvetica, sans-serif;
 }/*# sourceMappingURL=index.css.map */
